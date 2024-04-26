@@ -1,0 +1,28 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "setuptools-scm>=8.0"
+    ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyRejseplan"
+dynamic = ["version"]
+authors = [
+  { name="Jacob Warrer", email="Jacobwarrer@gmail.com" },
+]
+description = "Python interface with rejseplanens newest API"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools_scm]
+version_file = "pyRejseplan/_version.py"
+
+[project.urls]
+Homepage = "https://github.com/Jawar19/pyRejseplan"
+Issues = "https://github.com/Jawar19/pyRejseplan/issues"
