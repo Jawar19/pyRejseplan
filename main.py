@@ -28,7 +28,7 @@ if args.debug:
     DEBUG = True
 
 KEY = None
-with open(os.path.join(os.getcwd(), "rejseplan.key")) as keyfile:
+with open(os.path.join(os.getcwd(), "rejseplan.key"), encoding='utf-8') as keyfile:
     for line in keyfile.readlines():
         if line.startswith("KEY:"):
             KEY = line.strip("KEY:").strip()
@@ -38,4 +38,7 @@ if not KEY:
 rootlogger.info("Auth key found")
 rootlogger.debug("Auth key found")
 # location_handler = LocationHandler(KEY)
-departure_board = DepartureBoard()
+departure_board = DepartureBoard(KEY)
+departure_board._stop_ids = [8600617, 8600794]
+response = departure_board.update()
+print(response.content)

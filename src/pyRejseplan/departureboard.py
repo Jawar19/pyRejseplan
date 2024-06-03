@@ -18,16 +18,45 @@ class DepartureBoard():
 
 
     def __init__(self, auth_key:str) -> None:
-        self._logger.debug("init called")
+        self._logger.debug("__init__ called")
+        self._construct_header(auth_key)
 
-    def _request(self):
+    @staticmethod
+    def _request(service, headers, params, timeout):
+        url = constants.RESOURCE + service
+        try:
+            response = requests.get(
+                url,
+                params,
+                headers=headers,
+                timeout=timeout
+            )
+        except requests.exceptions.RequestException as ex:
+            # TODO Make custom exceptions
+            pass
+        if (response.status_code == requests.codes.ok):
+            return response
 
+    def update(self):
+        params: dict = {}
         if len(self._stop_ids) < 1:
             raise ValueError("Need at least one id.")
-        pass
+        params["idList"] = self._stop_ids
+        
+        if self._useBus:
+            params["useBus"] = self._useBus
+        if self._useTrain:
+            params["useTrain"] = self._useTrain
+        if self._useMetro:
+            params["useMetro"] = self._useMetro
 
-    def _update(self):
-        pass
+        response = self._request(
+            "multiDepartureBoard",
+            self._header,
+            params,
+            self._timeout
+            )
+        return response
 
     def _construct_header(self, auth_key) -> None:
         self._header = {
@@ -49,6 +78,11 @@ class DepartureBoard():
     
     @timeout.setter
     def timeout(self, value: float) -> None:
+        if value < 0:
+            raise ValueError("Timeout can not be negative number")
+        elif value == 0:
+            raise ValueError("Timeout can not be zero")
+        
         self._timeout = value
 
     @property
