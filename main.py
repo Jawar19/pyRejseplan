@@ -1,0 +1,41 @@
+import logging
+import os, sys, argparse
+
+from pyRejseplan import LocationHandler, DepartureBoard
+
+DEBUG = False
+
+log_lvl = logging.INFO
+
+rootlogger:logging.Logger = logging.getLogger()
+rootlogger.setLevel(log_lvl)
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+ch.setFormatter(formatter)
+rootlogger.addHandler(ch)
+
+parser = argparse.ArgumentParser(description="Test script for testing location functionality for Rejseplanen API")
+parser.add_argument('-d', '--debug', action='store_true', help='Enable debug mode')
+
+args = parser.parse_args()
+
+if args.debug:
+    rootlogger.info("DEBUG flag set")
+    log_lvl = logging.DEBUG
+    rootlogger.setLevel(log_lvl)
+    ch.setLevel(log_lvl) 
+    DEBUG = True
+
+KEY = None
+with open(os.path.join(os.getcwd(), "rejseplan.key")) as keyfile:
+    for line in keyfile.readlines():
+        if line.startswith("KEY:"):
+            KEY = line.strip("KEY:").strip()
+if not KEY:
+    print("Auth key not found")
+    sys.exit(1)
+rootlogger.info("Auth key found")
+rootlogger.debug("Auth key found")
+# location_handler = LocationHandler(KEY)
+departure_board = DepartureBoard()

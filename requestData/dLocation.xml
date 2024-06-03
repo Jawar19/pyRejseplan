@@ -1,0 +1,1303 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:LocationList xmlns:ns0="http://hacon.de/hafas/proxy/hafas-proxy" serverVersion="2.37.2"
+        dialectVersion="2.35-Rejseplanen" requestId="2qkegj4kwxewg64k">
+        <ns0:TechnicalMessages>
+                <ns0:TechnicalMessage key="requestTime">2024-05-24 20:36:57</ns0:TechnicalMessage>
+                <ns0:TechnicalMessage key="backendInfo">ttp=16216#16298 plancode0=n9wae
+                        planid=1716549412 planid0=1716549412 planid_adr=1715591035
+                        plancode_adr=npcst planid_poi=1713166507 plancode_poi=l9d0t
+                        srvv=5.45.Rejseplanen.15.2.2 (customer/hcudk/release/2024.2.0.2)
+                        [2024-03-05] tlibv=TRFVER: rel/dk/10.04.5 2024-02-21 11:21:45 +0100
+                        Rejsekort v10.4.5 jno=1</ns0:TechnicalMessage>
+        </ns0:TechnicalMessages>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@B=1@p=1716549412@"
+                extId="8600617" isMainMast="true" name="Roskilde St." lon="12.08855" lat="55.639093"
+                weight="19235" products="239">
+                <ns0:LocationNotes>
+                        <ns0:LocationNote key="FB" type="A" txtN="" />
+                        <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                        <ns0:LocationNote key="TE" type="I" txtN="8600617///741,74/">
+                                8600617///741,74/</ns0:LocationNote>
+                        <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                        <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                        <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                        <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                        <ns0:LocationNote key="en" type="I" txtN="200">200</ns0:LocationNote>
+                        <ns0:LocationNote key="ev" type="I" txtN="200">200</ns0:LocationNote>
+                </ns0:LocationNotes>
+                <ns0:productAtStop name="IC" cls="1">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="ICL" cls="2">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 110R" internalName="Lokalbane 110R" line="110R"
+                        lineId="005_000153_110R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 210R" internalName="Lokalbane 210R" line="210R"
+                        lineId="005_000153_210R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus 110R" internalName="Togbus 110R" line="110R"
+                        lineId="026_00006__110R" catOut="Togbus" cls="8" catOutS="026"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_gen" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus BLÅ" internalName="Togbus BLÅ" line="BLÅ"
+                        lineId="018_001002_BLc5" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus GRØN" internalName="Togbus GRØN" line="GRØN"
+                        lineId="018_001002_GRd8N" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus RØD" internalName="Togbus RØD" line="RØD"
+                        lineId="018_001002_Rd8D" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 123" internalName="Bus 123" line="123"
+                        lineId="013_00006__123" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 201A" internalName="Bus 201A" line="201A"
+                        lineId="043_00006__201A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 202A" internalName="Bus 202A" line="202A"
+                        lineId="043_00006__202A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 203" internalName="Bus 203" line="203"
+                        lineId="013_00006__203" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 204" internalName="Bus 204" line="204"
+                        lineId="013_00006__204" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 205" internalName="Bus 205" line="205"
+                        lineId="013_00006__205" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 206" internalName="Bus 206" line="206"
+                        lineId="013_00006__206" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 207" internalName="Bus 207" line="207"
+                        lineId="013_00006__207" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 208" internalName="Bus 208" line="208"
+                        lineId="013_00006__208" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 209" internalName="Bus 209" line="209"
+                        lineId="013_00006__209" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 212" internalName="Bus 212" line="212"
+                        lineId="013_00006__212" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 216" internalName="Bus 216" line="216"
+                        lineId="013_00006__216" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 220" internalName="Bus 220" line="220"
+                        lineId="013_00006__220" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 226" internalName="Bus 226" line="226"
+                        lineId="013_00006__226" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 227" internalName="Bus 227" line="227"
+                        lineId="013_00006__227" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 230R" internalName="Bus 230R" line="230R"
+                        lineId="013_00006__230R" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 231" internalName="Bus 231" line="231"
+                        lineId="013_00006__231" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 233" internalName="Bus 233" line="233"
+                        lineId="013_00006__233" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 236" internalName="Bus 236" line="236"
+                        lineId="013_00006__236" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 240" internalName="Bus 240" line="240"
+                        lineId="013_00006__240" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 358" internalName="Bus 358" line="358"
+                        lineId="013_00006__358" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 600S" internalName="Bus 600S" line="600S"
+                        lineId="020_00006__600S" catOut="Bus" cls="64" catOutS="020" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 91N" internalName="Natbus 91N" line="91N"
+                        lineId="022_00006__91N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 93N" internalName="Natbus 93N" line="93N"
+                        lineId="022_00006__93N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 98N" internalName="Natbus 98N" line="98N"
+                        lineId="022_00006__98N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+        </ns0:StopLocation>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde St.@X=12086222@Y=55638392@U=86@L=6555@B=1@p=1716549412@"
+                extId="6555" hasMainMast="true"
+                mainMastId="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@"
+                mainMastExtId="8600617" mainMastLon="12.08855" mainMastLat="55.639093"
+                name="Roskilde St." lon="12.086222" lat="55.638392" weight="19235" products="239">
+                <ns0:productAtStop name="IC" cls="1">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="ICL" cls="2">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 110R" internalName="Lokalbane 110R" line="110R"
+                        lineId="005_000153_110R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 210R" internalName="Lokalbane 210R" line="210R"
+                        lineId="005_000153_210R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus 110R" internalName="Togbus 110R" line="110R"
+                        lineId="026_00006__110R" catOut="Togbus" cls="8" catOutS="026"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_gen" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus BLÅ" internalName="Togbus BLÅ" line="BLÅ"
+                        lineId="018_001002_BLc5" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus GRØN" internalName="Togbus GRØN" line="GRØN"
+                        lineId="018_001002_GRd8N" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus RØD" internalName="Togbus RØD" line="RØD"
+                        lineId="018_001002_Rd8D" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 123" internalName="Bus 123" line="123"
+                        lineId="013_00006__123" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 201A" internalName="Bus 201A" line="201A"
+                        lineId="043_00006__201A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 202A" internalName="Bus 202A" line="202A"
+                        lineId="043_00006__202A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 203" internalName="Bus 203" line="203"
+                        lineId="013_00006__203" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 204" internalName="Bus 204" line="204"
+                        lineId="013_00006__204" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 205" internalName="Bus 205" line="205"
+                        lineId="013_00006__205" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 206" internalName="Bus 206" line="206"
+                        lineId="013_00006__206" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 207" internalName="Bus 207" line="207"
+                        lineId="013_00006__207" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 208" internalName="Bus 208" line="208"
+                        lineId="013_00006__208" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 209" internalName="Bus 209" line="209"
+                        lineId="013_00006__209" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 212" internalName="Bus 212" line="212"
+                        lineId="013_00006__212" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 216" internalName="Bus 216" line="216"
+                        lineId="013_00006__216" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 220" internalName="Bus 220" line="220"
+                        lineId="013_00006__220" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 226" internalName="Bus 226" line="226"
+                        lineId="013_00006__226" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 227" internalName="Bus 227" line="227"
+                        lineId="013_00006__227" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 230R" internalName="Bus 230R" line="230R"
+                        lineId="013_00006__230R" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 231" internalName="Bus 231" line="231"
+                        lineId="013_00006__231" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 233" internalName="Bus 233" line="233"
+                        lineId="013_00006__233" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 236" internalName="Bus 236" line="236"
+                        lineId="013_00006__236" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 240" internalName="Bus 240" line="240"
+                        lineId="013_00006__240" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 358" internalName="Bus 358" line="358"
+                        lineId="013_00006__358" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 600S" internalName="Bus 600S" line="600S"
+                        lineId="020_00006__600S" catOut="Bus" cls="64" catOutS="020" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 91N" internalName="Natbus 91N" line="91N"
+                        lineId="022_00006__91N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 93N" internalName="Natbus 93N" line="93N"
+                        lineId="022_00006__93N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 98N" internalName="Natbus 98N" line="98N"
+                        lineId="022_00006__98N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+                <ns0:mainMast id="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@"
+                        extId="8600617" isMainMast="true" name="Roskilde St." lon="12.08855"
+                        lat="55.639093" products="175">
+                        <ns0:LocationNotes>
+                                <ns0:LocationNote key="FB" type="A" txtN="" />
+                                <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                                <ns0:LocationNote key="TE" type="I" txtN="8600617///741,74/">
+                                        8600617///741,74/</ns0:LocationNote>
+                                <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                                <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                                <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                                <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                                <ns0:LocationNote key="en" type="I" txtN="200">200</ns0:LocationNote>
+                                <ns0:LocationNote key="ev" type="I" txtN="200">200</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                        <ns0:timezoneOffset>120</ns0:timezoneOffset>
+                </ns0:mainMast>
+        </ns0:StopLocation>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde St.@X=12085961@Y=55638302@U=86@L=6556@B=1@p=1716549412@"
+                extId="6556" hasMainMast="true"
+                mainMastId="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@"
+                mainMastExtId="8600617" mainMastLon="12.08855" mainMastLat="55.639093"
+                name="Roskilde St." lon="12.085961" lat="55.638302" weight="19235" products="239">
+                <ns0:LocationNotes>
+                        <ns0:LocationNote key="FB" type="A" txtN="" />
+                        <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                        <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                        <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                        <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                        <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                </ns0:LocationNotes>
+                <ns0:productAtStop name="IC" cls="1">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="ICL" cls="2">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 110R" internalName="Lokalbane 110R" line="110R"
+                        lineId="005_000153_110R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 210R" internalName="Lokalbane 210R" line="210R"
+                        lineId="005_000153_210R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus 110R" internalName="Togbus 110R" line="110R"
+                        lineId="026_00006__110R" catOut="Togbus" cls="8" catOutS="026"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_gen" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus BLÅ" internalName="Togbus BLÅ" line="BLÅ"
+                        lineId="018_001002_BLc5" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus GRØN" internalName="Togbus GRØN" line="GRØN"
+                        lineId="018_001002_GRd8N" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus RØD" internalName="Togbus RØD" line="RØD"
+                        lineId="018_001002_Rd8D" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 123" internalName="Bus 123" line="123"
+                        lineId="013_00006__123" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 201A" internalName="Bus 201A" line="201A"
+                        lineId="043_00006__201A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 202A" internalName="Bus 202A" line="202A"
+                        lineId="043_00006__202A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 203" internalName="Bus 203" line="203"
+                        lineId="013_00006__203" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 204" internalName="Bus 204" line="204"
+                        lineId="013_00006__204" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 205" internalName="Bus 205" line="205"
+                        lineId="013_00006__205" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 206" internalName="Bus 206" line="206"
+                        lineId="013_00006__206" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 207" internalName="Bus 207" line="207"
+                        lineId="013_00006__207" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 208" internalName="Bus 208" line="208"
+                        lineId="013_00006__208" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 209" internalName="Bus 209" line="209"
+                        lineId="013_00006__209" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 212" internalName="Bus 212" line="212"
+                        lineId="013_00006__212" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 216" internalName="Bus 216" line="216"
+                        lineId="013_00006__216" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 220" internalName="Bus 220" line="220"
+                        lineId="013_00006__220" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 226" internalName="Bus 226" line="226"
+                        lineId="013_00006__226" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 227" internalName="Bus 227" line="227"
+                        lineId="013_00006__227" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 230R" internalName="Bus 230R" line="230R"
+                        lineId="013_00006__230R" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 231" internalName="Bus 231" line="231"
+                        lineId="013_00006__231" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 233" internalName="Bus 233" line="233"
+                        lineId="013_00006__233" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 236" internalName="Bus 236" line="236"
+                        lineId="013_00006__236" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 240" internalName="Bus 240" line="240"
+                        lineId="013_00006__240" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 358" internalName="Bus 358" line="358"
+                        lineId="013_00006__358" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 600S" internalName="Bus 600S" line="600S"
+                        lineId="020_00006__600S" catOut="Bus" cls="64" catOutS="020" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 91N" internalName="Natbus 91N" line="91N"
+                        lineId="022_00006__91N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 93N" internalName="Natbus 93N" line="93N"
+                        lineId="022_00006__93N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 98N" internalName="Natbus 98N" line="98N"
+                        lineId="022_00006__98N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+                <ns0:mainMast id="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@"
+                        extId="8600617" isMainMast="true" name="Roskilde St." lon="12.08855"
+                        lat="55.639093" products="175">
+                        <ns0:LocationNotes>
+                                <ns0:LocationNote key="FB" type="A" txtN="" />
+                                <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                                <ns0:LocationNote key="TE" type="I" txtN="8600617///741,74/">
+                                        8600617///741,74/</ns0:LocationNote>
+                                <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                                <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                                <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                                <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                                <ns0:LocationNote key="en" type="I" txtN="200">200</ns0:LocationNote>
+                                <ns0:LocationNote key="ev" type="I" txtN="200">200</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                        <ns0:timezoneOffset>120</ns0:timezoneOffset>
+                </ns0:mainMast>
+        </ns0:StopLocation>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde St.@X=12083354@Y=55637781@U=86@L=10414@B=1@p=1716549412@"
+                extId="10414" hasMainMast="true"
+                mainMastId="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@"
+                mainMastExtId="8600617" mainMastLon="12.08855" mainMastLat="55.639093"
+                name="Roskilde St." lon="12.083354" lat="55.637781" weight="19235" products="239">
+                <ns0:LocationNotes>
+                        <ns0:LocationNote key="FB" type="A" txtN="" />
+                        <ns0:LocationNote key="KP" type="I" txtN="1">1</ns0:LocationNote>
+                        <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                        <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                        <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                        <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                        <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                </ns0:LocationNotes>
+                <ns0:productAtStop name="IC" cls="1">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="ICL" cls="2">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 110R" internalName="Lokalbane 110R" line="110R"
+                        lineId="005_000153_110R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 210R" internalName="Lokalbane 210R" line="210R"
+                        lineId="005_000153_210R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus 110R" internalName="Togbus 110R" line="110R"
+                        lineId="026_00006__110R" catOut="Togbus" cls="8" catOutS="026"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_gen" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus BLÅ" internalName="Togbus BLÅ" line="BLÅ"
+                        lineId="018_001002_BLc5" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus GRØN" internalName="Togbus GRØN" line="GRØN"
+                        lineId="018_001002_GRd8N" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus RØD" internalName="Togbus RØD" line="RØD"
+                        lineId="018_001002_Rd8D" catOut="Togbus" cls="8" catOutS="018"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 123" internalName="Bus 123" line="123"
+                        lineId="013_00006__123" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 201A" internalName="Bus 201A" line="201A"
+                        lineId="043_00006__201A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 202A" internalName="Bus 202A" line="202A"
+                        lineId="043_00006__202A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 203" internalName="Bus 203" line="203"
+                        lineId="013_00006__203" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 204" internalName="Bus 204" line="204"
+                        lineId="013_00006__204" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 205" internalName="Bus 205" line="205"
+                        lineId="013_00006__205" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 206" internalName="Bus 206" line="206"
+                        lineId="013_00006__206" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 207" internalName="Bus 207" line="207"
+                        lineId="013_00006__207" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 208" internalName="Bus 208" line="208"
+                        lineId="013_00006__208" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 209" internalName="Bus 209" line="209"
+                        lineId="013_00006__209" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 212" internalName="Bus 212" line="212"
+                        lineId="013_00006__212" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 216" internalName="Bus 216" line="216"
+                        lineId="013_00006__216" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 220" internalName="Bus 220" line="220"
+                        lineId="013_00006__220" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 226" internalName="Bus 226" line="226"
+                        lineId="013_00006__226" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 227" internalName="Bus 227" line="227"
+                        lineId="013_00006__227" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 230R" internalName="Bus 230R" line="230R"
+                        lineId="013_00006__230R" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 231" internalName="Bus 231" line="231"
+                        lineId="013_00006__231" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 233" internalName="Bus 233" line="233"
+                        lineId="013_00006__233" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 236" internalName="Bus 236" line="236"
+                        lineId="013_00006__236" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 240" internalName="Bus 240" line="240"
+                        lineId="013_00006__240" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 358" internalName="Bus 358" line="358"
+                        lineId="013_00006__358" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 600S" internalName="Bus 600S" line="600S"
+                        lineId="020_00006__600S" catOut="Bus" cls="64" catOutS="020" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 91N" internalName="Natbus 91N" line="91N"
+                        lineId="022_00006__91N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 93N" internalName="Natbus 93N" line="93N"
+                        lineId="022_00006__93N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 98N" internalName="Natbus 98N" line="98N"
+                        lineId="022_00006__98N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+                <ns0:mainMast id="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@"
+                        extId="8600617" isMainMast="true" name="Roskilde St." lon="12.08855"
+                        lat="55.639093" products="175">
+                        <ns0:LocationNotes>
+                                <ns0:LocationNote key="FB" type="A" txtN="" />
+                                <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                                <ns0:LocationNote key="TE" type="I" txtN="8600617///741,74/">
+                                        8600617///741,74/</ns0:LocationNote>
+                                <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                                <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                                <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                                <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                                <ns0:LocationNote key="en" type="I" txtN="200">200</ns0:LocationNote>
+                                <ns0:LocationNote key="ev" type="I" txtN="200">200</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                        <ns0:timezoneOffset>120</ns0:timezoneOffset>
+                </ns0:mainMast>
+        </ns0:StopLocation>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde Festivalplads St.@X=12070311@Y=55621960@U=86@L=8600794@B=1@p=1716549412@"
+                extId="8600794" isMainMast="true" name="Roskilde Festivalplads St." lon="12.070311"
+                lat="55.62196" weight="1647" products="4">
+                <ns0:LocationNotes>
+                        <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                        <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                        <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                        <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                        <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                </ns0:LocationNotes>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+        </ns0:StopLocation>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde Festivalplads St.@X=12071596@Y=55621339@U=86@L=8601794@B=1@p=1716549412@"
+                extId="8601794" hasMainMast="true"
+                mainMastId="A=1@O=Roskilde Festivalplads St.@X=12070311@Y=55621960@U=86@L=8600794@"
+                mainMastExtId="8600794" mainMastLon="12.070311" mainMastLat="55.62196"
+                name="Roskilde Festivalplads St." lon="12.071596" lat="55.621339" weight="1647"
+                products="4">
+                <ns0:LocationNotes>
+                        <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                        <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                        <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                        <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                        <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                </ns0:LocationNotes>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+                <ns0:mainMast
+                        id="A=1@O=Roskilde Festivalplads St.@X=12070311@Y=55621960@U=86@L=8600794@"
+                        extId="8600794" isMainMast="true" name="Roskilde Festivalplads St."
+                        lon="12.070311" lat="55.62196" products="4">
+                        <ns0:LocationNotes>
+                                <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                                <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                                <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                                <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                                <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                        <ns0:timezoneOffset>120</ns0:timezoneOffset>
+                </ns0:mainMast>
+        </ns0:StopLocation>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde St. (Jernbanegade)@X=12088019@Y=55639093@U=86@L=51189@B=1@p=1716549412@"
+                extId="51189" name="Roskilde St. (Jernbanegade)" lon="12.088019" lat="55.639093"
+                weight="525" products="239">
+                <ns0:LocationNotes>
+                        <ns0:LocationNote key="FB" type="A" txtN="" />
+                        <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                        <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                        <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                        <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                        <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                </ns0:LocationNotes>
+                <ns0:productAtStop name="IC" cls="1">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="ICL" cls="2">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 110R" internalName="Lokalbane 110R" line="110R"
+                        lineId="005_000153_110R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 210R" internalName="Lokalbane 210R" line="210R"
+                        lineId="005_000153_210R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus 110R" internalName="Togbus 110R" line="110R"
+                        lineId="026_00006__110R" catOut="Togbus" cls="8" catOutS="026"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_gen" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 123" internalName="Bus 123" line="123"
+                        lineId="013_00006__123" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 201A" internalName="Bus 201A" line="201A"
+                        lineId="043_00006__201A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 202A" internalName="Bus 202A" line="202A"
+                        lineId="043_00006__202A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 203" internalName="Bus 203" line="203"
+                        lineId="013_00006__203" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 204" internalName="Bus 204" line="204"
+                        lineId="013_00006__204" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 205" internalName="Bus 205" line="205"
+                        lineId="013_00006__205" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 206" internalName="Bus 206" line="206"
+                        lineId="013_00006__206" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 207" internalName="Bus 207" line="207"
+                        lineId="013_00006__207" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 208" internalName="Bus 208" line="208"
+                        lineId="013_00006__208" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 209" internalName="Bus 209" line="209"
+                        lineId="013_00006__209" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 212" internalName="Bus 212" line="212"
+                        lineId="013_00006__212" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 216" internalName="Bus 216" line="216"
+                        lineId="013_00006__216" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 220" internalName="Bus 220" line="220"
+                        lineId="013_00006__220" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 226" internalName="Bus 226" line="226"
+                        lineId="013_00006__226" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 227" internalName="Bus 227" line="227"
+                        lineId="013_00006__227" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 230R" internalName="Bus 230R" line="230R"
+                        lineId="013_00006__230R" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 231" internalName="Bus 231" line="231"
+                        lineId="013_00006__231" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 233" internalName="Bus 233" line="233"
+                        lineId="013_00006__233" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 236" internalName="Bus 236" line="236"
+                        lineId="013_00006__236" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 240" internalName="Bus 240" line="240"
+                        lineId="013_00006__240" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 358" internalName="Bus 358" line="358"
+                        lineId="013_00006__358" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 600S" internalName="Bus 600S" line="600S"
+                        lineId="020_00006__600S" catOut="Bus" cls="64" catOutS="020" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 91N" internalName="Natbus 91N" line="91N"
+                        lineId="022_00006__91N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 93N" internalName="Natbus 93N" line="93N"
+                        lineId="022_00006__93N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 98N" internalName="Natbus 98N" line="98N"
+                        lineId="022_00006__98N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+        </ns0:StopLocation>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde St. (Jernbanegade)@X=12088667@Y=55639372@U=86@L=10850@B=1@p=1716549412@"
+                extId="10850" name="Roskilde St. (Jernbanegade)" lon="12.088667" lat="55.639372"
+                weight="525" products="239">
+                <ns0:LocationNotes>
+                        <ns0:LocationNote key="FB" type="A" txtN="" />
+                        <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                        <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                        <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                        <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                        <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                </ns0:LocationNotes>
+                <ns0:productAtStop name="IC" cls="1">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="ICL" cls="2">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 110R" internalName="Lokalbane 110R" line="110R"
+                        lineId="005_000153_110R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 210R" internalName="Lokalbane 210R" line="210R"
+                        lineId="005_000153_210R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus 110R" internalName="Togbus 110R" line="110R"
+                        lineId="026_00006__110R" catOut="Togbus" cls="8" catOutS="026"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_gen" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 123" internalName="Bus 123" line="123"
+                        lineId="013_00006__123" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 201A" internalName="Bus 201A" line="201A"
+                        lineId="043_00006__201A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 202A" internalName="Bus 202A" line="202A"
+                        lineId="043_00006__202A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 203" internalName="Bus 203" line="203"
+                        lineId="013_00006__203" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 204" internalName="Bus 204" line="204"
+                        lineId="013_00006__204" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 205" internalName="Bus 205" line="205"
+                        lineId="013_00006__205" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 206" internalName="Bus 206" line="206"
+                        lineId="013_00006__206" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 207" internalName="Bus 207" line="207"
+                        lineId="013_00006__207" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 208" internalName="Bus 208" line="208"
+                        lineId="013_00006__208" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 209" internalName="Bus 209" line="209"
+                        lineId="013_00006__209" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 212" internalName="Bus 212" line="212"
+                        lineId="013_00006__212" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 216" internalName="Bus 216" line="216"
+                        lineId="013_00006__216" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 220" internalName="Bus 220" line="220"
+                        lineId="013_00006__220" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 226" internalName="Bus 226" line="226"
+                        lineId="013_00006__226" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 227" internalName="Bus 227" line="227"
+                        lineId="013_00006__227" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 230R" internalName="Bus 230R" line="230R"
+                        lineId="013_00006__230R" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 231" internalName="Bus 231" line="231"
+                        lineId="013_00006__231" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 233" internalName="Bus 233" line="233"
+                        lineId="013_00006__233" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 236" internalName="Bus 236" line="236"
+                        lineId="013_00006__236" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 240" internalName="Bus 240" line="240"
+                        lineId="013_00006__240" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 358" internalName="Bus 358" line="358"
+                        lineId="013_00006__358" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 600S" internalName="Bus 600S" line="600S"
+                        lineId="020_00006__600S" catOut="Bus" cls="64" catOutS="020" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 91N" internalName="Natbus 91N" line="91N"
+                        lineId="022_00006__91N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 93N" internalName="Natbus 93N" line="93N"
+                        lineId="022_00006__93N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 98N" internalName="Natbus 98N" line="98N"
+                        lineId="022_00006__98N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+        </ns0:StopLocation>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde St., Sygehuset (Ny Østergade)@X=12088487@Y=55637772@U=86@L=10044@B=1@p=1716549412@"
+                extId="10044" name="Roskilde St., Sygehuset (Ny Østergade)" lon="12.088487"
+                lat="55.637772" weight="739" products="239">
+                <ns0:LocationNotes>
+                        <ns0:LocationNote key="FB" type="A" txtN="" />
+                        <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                        <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                        <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                        <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                        <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                </ns0:LocationNotes>
+                <ns0:productAtStop name="IC" cls="1">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="ICL" cls="2">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 110R" internalName="Lokalbane 110R" line="110R"
+                        lineId="005_000153_110R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 210R" internalName="Lokalbane 210R" line="210R"
+                        lineId="005_000153_210R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus 110R" internalName="Togbus 110R" line="110R"
+                        lineId="026_00006__110R" catOut="Togbus" cls="8" catOutS="026"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_gen" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 123" internalName="Bus 123" line="123"
+                        lineId="013_00006__123" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 201A" internalName="Bus 201A" line="201A"
+                        lineId="043_00006__201A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 202A" internalName="Bus 202A" line="202A"
+                        lineId="043_00006__202A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 203" internalName="Bus 203" line="203"
+                        lineId="013_00006__203" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 204" internalName="Bus 204" line="204"
+                        lineId="013_00006__204" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 205" internalName="Bus 205" line="205"
+                        lineId="013_00006__205" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 206" internalName="Bus 206" line="206"
+                        lineId="013_00006__206" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 207" internalName="Bus 207" line="207"
+                        lineId="013_00006__207" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 208" internalName="Bus 208" line="208"
+                        lineId="013_00006__208" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 209" internalName="Bus 209" line="209"
+                        lineId="013_00006__209" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 212" internalName="Bus 212" line="212"
+                        lineId="013_00006__212" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 216" internalName="Bus 216" line="216"
+                        lineId="013_00006__216" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 220" internalName="Bus 220" line="220"
+                        lineId="013_00006__220" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 226" internalName="Bus 226" line="226"
+                        lineId="013_00006__226" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 227" internalName="Bus 227" line="227"
+                        lineId="013_00006__227" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 230R" internalName="Bus 230R" line="230R"
+                        lineId="013_00006__230R" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 231" internalName="Bus 231" line="231"
+                        lineId="013_00006__231" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 233" internalName="Bus 233" line="233"
+                        lineId="013_00006__233" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 236" internalName="Bus 236" line="236"
+                        lineId="013_00006__236" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 240" internalName="Bus 240" line="240"
+                        lineId="013_00006__240" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 358" internalName="Bus 358" line="358"
+                        lineId="013_00006__358" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 600S" internalName="Bus 600S" line="600S"
+                        lineId="020_00006__600S" catOut="Bus" cls="64" catOutS="020" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 91N" internalName="Natbus 91N" line="91N"
+                        lineId="022_00006__91N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 93N" internalName="Natbus 93N" line="93N"
+                        lineId="022_00006__93N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 98N" internalName="Natbus 98N" line="98N"
+                        lineId="022_00006__98N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+        </ns0:StopLocation>
+        <ns0:StopLocation
+                id="A=1@O=Roskilde St., Sygehuset (Ny Østergade)@X=12088406@Y=55637736@U=86@L=10043@B=1@p=1716549412@"
+                extId="10043" name="Roskilde St., Sygehuset (Ny Østergade)" lon="12.088406"
+                lat="55.637736" weight="739" products="239">
+                <ns0:LocationNotes>
+                        <ns0:LocationNote key="FB" type="A" txtN="" />
+                        <ns0:LocationNote key="OZ" type="I" txtN="ABCH">ABCH</ns0:LocationNote>
+                        <ns0:LocationNote key="TN" type="I" txtN="1008">1008</ns0:LocationNote>
+                        <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                        <ns0:LocationNote key="TR" type="I" txtN="DOT 8">DOT 8</ns0:LocationNote>
+                        <ns0:LocationNote key="TW" type="I" txtN="8">8</ns0:LocationNote>
+                </ns0:LocationNotes>
+                <ns0:productAtStop name="IC" cls="1">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="ICL" cls="2">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Re" cls="4">
+                        <ns0:icon res="prod_ic" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 110R" internalName="Lokalbane 110R" line="110R"
+                        lineId="005_000153_110R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Lokalbane 210R" internalName="Lokalbane 210R" line="210R"
+                        lineId="005_000153_210R" catOut="L" cls="8" catOutS="005"
+                        catOutL="Lokalbane">
+                        <ns0:icon res="prod_lokalbane" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Togbus 110R" internalName="Togbus 110R" line="110R"
+                        lineId="026_00006__110R" catOut="Togbus" cls="8" catOutS="026"
+                        catOutL="Togbus">
+                        <ns0:icon res="prod_gen" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 123" internalName="Bus 123" line="123"
+                        lineId="013_00006__123" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 201A" internalName="Bus 201A" line="201A"
+                        lineId="043_00006__201A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 202A" internalName="Bus 202A" line="202A"
+                        lineId="043_00006__202A" catOut="Bus" cls="32" catOutS="043" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 203" internalName="Bus 203" line="203"
+                        lineId="013_00006__203" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 204" internalName="Bus 204" line="204"
+                        lineId="013_00006__204" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 205" internalName="Bus 205" line="205"
+                        lineId="013_00006__205" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 206" internalName="Bus 206" line="206"
+                        lineId="013_00006__206" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 207" internalName="Bus 207" line="207"
+                        lineId="013_00006__207" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 208" internalName="Bus 208" line="208"
+                        lineId="013_00006__208" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 209" internalName="Bus 209" line="209"
+                        lineId="013_00006__209" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 212" internalName="Bus 212" line="212"
+                        lineId="013_00006__212" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 216" internalName="Bus 216" line="216"
+                        lineId="013_00006__216" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 220" internalName="Bus 220" line="220"
+                        lineId="013_00006__220" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 226" internalName="Bus 226" line="226"
+                        lineId="013_00006__226" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 227" internalName="Bus 227" line="227"
+                        lineId="013_00006__227" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 230R" internalName="Bus 230R" line="230R"
+                        lineId="013_00006__230R" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 231" internalName="Bus 231" line="231"
+                        lineId="013_00006__231" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 233" internalName="Bus 233" line="233"
+                        lineId="013_00006__233" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 236" internalName="Bus 236" line="236"
+                        lineId="013_00006__236" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 240" internalName="Bus 240" line="240"
+                        lineId="013_00006__240" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 358" internalName="Bus 358" line="358"
+                        lineId="013_00006__358" catOut="Bus" cls="32" catOutS="013" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Bus 600S" internalName="Bus 600S" line="600S"
+                        lineId="020_00006__600S" catOut="Bus" cls="64" catOutS="020" catOutL="Bus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 91N" internalName="Natbus 91N" line="91N"
+                        lineId="022_00006__91N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 93N" internalName="Natbus 93N" line="93N"
+                        lineId="022_00006__93N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:productAtStop name="Natbus 98N" internalName="Natbus 98N" line="98N"
+                        lineId="022_00006__98N" catOut="Bus" cls="128" catOutS="022"
+                        catOutL="Natbus">
+                        <ns0:icon res="prod_bus" />
+                </ns0:productAtStop>
+                <ns0:timezoneOffset>120</ns0:timezoneOffset>
+        </ns0:StopLocation>
+</ns0:LocationList>

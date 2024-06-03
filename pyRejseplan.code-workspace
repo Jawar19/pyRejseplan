@@ -1,0 +1,32 @@
+{
+    "folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"editorRuler.foreground": "#ffc400"
+		},
+		"[python]": {
+			"editor.rulers": [
+				79,
+				120
+			]
+		},
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Python Debugger: main.py Arguments",
+				"type": "debugpy",
+				"request": "launch",
+				"program": "main.py",
+				"console": "integratedTerminal",
+				"args": "${command:pickArgs}"
+			},
+		],
+		"compounds": []
+	},
+}
