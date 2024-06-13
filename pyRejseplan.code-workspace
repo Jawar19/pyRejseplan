@@ -14,6 +14,14 @@
 				120
 			]
 		},
+		"autoDocstring.docstringFormat": "pep257",
+		// "autoDocstring.customTemplatePath": "",
+		"autoDocstring.generateDocstringOnEnter": true,
+		"autoDocstring.includeExtendedSummary": false,
+		"autoDocstring.includeName": false,
+		"autoDocstring.startOnNewLine": false,
+		"autoDocstring.guessTypes": true,
+		"autoDocstring.quoteStyle": "\"\"\""
 	},
 	"launch": {
 		"version": "0.2.0",
@@ -27,5 +35,11 @@
 			},
 		],
 		"compounds": []
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-python.python",
+			"njpwerner.autodocstring"
+		]
 	},
 }

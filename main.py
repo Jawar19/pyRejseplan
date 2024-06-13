@@ -1,5 +1,7 @@
 import logging
 import os, sys, argparse
+from xml.etree import ElementTree
+import pickle as pkl
 
 from pyRejseplan import LocationHandler, DepartureBoard
 
@@ -36,9 +38,20 @@ if not KEY:
     print("Auth key not found")
     sys.exit(1)
 rootlogger.info("Auth key found")
-rootlogger.debug("Auth key found")
-# location_handler = LocationHandler(KEY)
-departure_board = DepartureBoard(KEY)
+
+if args.debug:
+    departure_board = DepartureBoard(KEY, r'requestData\mdbRoskildeSt.pkl')
+else:
+    departure_board = DepartureBoard(KEY)
+
 departure_board._stop_ids = [8600617, 8600794]
 response = departure_board.update()
-print(response.content)
+# print(response.content)
+
+# xmlroot: ElementTree.Element = ElementTree.fromstring(response.content)
+# xmltree = ElementTree.ElementTree(xmlroot)
+# with open(os.path.join(os.getcwd(), r'requestData/mdbRoskildeSt.xml'), 'wb') as file:
+#     xmltree.write(file, encoding='utf-8', xml_declaration=True)
+
+with open(os.path.join(os.getcwd(), r'requestData/mdbRoskildeSt.pkl'), 'wb') as file:
+    pkl.dump(response, file)
