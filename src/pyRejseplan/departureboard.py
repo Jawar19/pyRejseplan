@@ -7,7 +7,6 @@ from xml.etree import ElementTree
 from . import constants, utils
 
 
-
 class DepartureBoard:
     """Multidepartureboard wrapping class. latest request is stored in the
     class and translated into python dataclasses representing the data recieved
@@ -52,6 +51,7 @@ class DepartureBoard:
             # TODO Make custom exceptions
         if response.status_code == requests.codes["OK"]:
             return response
+        logging.getLogger(__name__).error("Request error: " + str(response.status_code))
         return None
 
     def update(self):
