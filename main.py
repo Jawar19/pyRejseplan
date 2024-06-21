@@ -2,10 +2,12 @@ import logging
 import os, sys, argparse
 from xml.etree import ElementTree
 import pickle as pkl
+import json
 
 from pyRejseplan import LocationHandler, DepartureBoard
 
 DEBUG = False
+JSON = False
 
 log_lvl = logging.INFO
 
@@ -19,6 +21,7 @@ rootlogger.addHandler(ch)
 
 parser = argparse.ArgumentParser(description="Test script for testing location functionality for Rejseplanen API")
 parser.add_argument('-d', '--debug', action='store_true', help='Enable debug mode')
+parser.add_argument('-j', '--json', action='store_true', help='Enable JSON mode')
 
 args = parser.parse_args()
 
@@ -28,6 +31,10 @@ if args.debug:
     rootlogger.setLevel(log_lvl)
     ch.setLevel(log_lvl) 
     DEBUG = True
+
+if args.json:
+    rootlogger.info("JSON flag set")
+    JSON = True
 
 KEY = None
 with open(os.path.join(os.getcwd(), "rejseplan.key"), encoding='utf-8') as keyfile:
@@ -40,18 +47,22 @@ if not KEY:
 rootlogger.info("Auth key found")
 
 if args.debug:
-    departure_board = DepartureBoard(KEY, r'requestData\mdbRoskildeSt.pkl')
+    departure_board = DepartureBoard(KEY, r'requestData\mdbRoskildeSt.pkl', JSON)
 else:
-    departure_board = DepartureBoard(KEY)
+    departure_board = DepartureBoard(KEY, None, JSON)
 
 departure_board._stop_ids = [8600617, 8600794]
 response = departure_board.update()
-# print(response.content)
 
-# xmlroot: ElementTree.Element = ElementTree.fromstring(response.content)
-# xmltree = ElementTree.ElementTree(xmlroot)
-# with open(os.path.join(os.getcwd(), r'requestData/mdbRoskildeSt.xml'), 'wb') as file:
-#     xmltree.write(file, encoding='utf-8', xml_declaration=True)
+if JSON:
+    with open(os.path.join(os.getcwd(), r'requestData/mdbRoskildeSt.json'), 'w', encoding='utf-8') as file:
+        file.write(json.dumps(response.json(), indent=2))
+else:
+    xmlroot: ElementTree.Element = ElementTree.fromstring(response.content)
+    xmltree = ElementTree.ElementTree(xmlroot)
+    ElementTree.indent(xmltree)
+    with open(os.path.join(os.getcwd(), r'requestData/mdbRoskildeSt.xml'), 'wb') as file:
+        xmltree.write(file, encoding='utf-8', xml_declaration=True)
 
 with open(os.path.join(os.getcwd(), r'requestData/mdbRoskildeSt.pkl'), 'wb') as file:
     pkl.dump(response, file)

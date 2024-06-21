@@ -23,7 +23,7 @@ class DepartureBoard:
     _use_train: bool = True
     _use_metro: bool = True
 
-    def __init__(self, auth_key: str, filepath:str = None) -> None:
+    def __init__(self, auth_key: str, filepath: str = None, request_json_response: bool = False) -> None:
         """Initialize the departure board wrapper
 
         Arguments:
@@ -33,7 +33,7 @@ class DepartureBoard:
             filepath -- path to simulation data (default: {None})
         """
         self._logger.debug("__init__ called")
-        self._construct_header(auth_key)
+        self._construct_header(auth_key, request_json_response)
 
         if filepath:
             self._logger.warning("Simulation data loaded from path %s", filepath)
@@ -80,17 +80,20 @@ class DepartureBoard:
         )
         return response
 
-    def _construct_header(self, auth_key) -> None:
-        self._header = {"Authorization": f"Bearer {auth_key}"}
+    def _construct_header(self, auth_key, use_json_response) -> None:
+        self._header = {
+            "Authorization": f"Bearer {auth_key}",
+            "Accept": "application/json" if use_json_response else "application/xml"
+        }
 
-    def add_stop_ids(self, ids:list) -> None:
+    def add_stop_ids(self, ids: list) -> None:
         """Add stop ids to the internal list of stop ids
         """
         seen = set(self._stop_ids)
         # Only add elements that are not already in the set
         self._stop_ids.extend(x for x in ids if x not in seen and not seen.add(x))
 
-    def remove_stop_ids(self, ids:list) -> None:
+    def remove_stop_ids(self, ids: list) -> None:
         """Remove the ids listed in the input list
 
         Arguments:
