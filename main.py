@@ -3,7 +3,8 @@ import os, sys, argparse
 from xml.etree import ElementTree
 import pickle as pkl
 
-from pyRejseplan import LocationHandler, DepartureBoard
+# from py_rejseplan.locationhandler import LocationHandler
+from py_rejseplan.departureboard import DepartureBoard
 
 DEBUG = False
 
@@ -45,13 +46,18 @@ else:
     departure_board = DepartureBoard(KEY)
 
 departure_board._stop_ids = [8600617, 8600794]
-response = departure_board.update()
+
+departure_board.get_departures()
+
+# response = departure_board.update()
+
 # print(response.content)
+
 
 # xmlroot: ElementTree.Element = ElementTree.fromstring(response.content)
 # xmltree = ElementTree.ElementTree(xmlroot)
 # with open(os.path.join(os.getcwd(), r'requestData/mdbRoskildeSt.xml'), 'wb') as file:
 #     xmltree.write(file, encoding='utf-8', xml_declaration=True)
 
-with open(os.path.join(os.getcwd(), r'requestData/mdbRoskildeSt.pkl'), 'wb') as file:
-    pkl.dump(response, file)
+# with open(os.path.join(os.getcwd(), r'requestData/mdbRoskildeSt.pkl'), 'wb') as file:
+#     pkl.dump(response, file)

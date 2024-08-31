@@ -54,7 +54,7 @@ class DepartureBoard:
             return response
         return None
 
-    def update(self):
+    def update(self) -> requests.Response:
         """Update multideparture board data
 
         Raises:
@@ -79,6 +79,22 @@ class DepartureBoard:
             "multiDepartureBoard", self._header, params, self._timeout
         )
         return self._response
+    
+    def get_departures(self):
+        """Updates the internal list of departures from the ID's provided to
+        the class.
+        """
+        response = self.update()
+        xmlroot: ElementTree.Element = ElementTree.fromstring(response.text)
+
+        print(xmlroot.tag)
+
+        for child in xmlroot:
+            print(child.tag, child.attrib)
+        # iterate trough the response and create a list of departures, this
+        # could be provides for later use as a generator or just returned as
+        # a list.
+        return []
 
     def _construct_header(self, auth_key) -> None:
         self._header = {"Authorization": f"Bearer {auth_key}"}
