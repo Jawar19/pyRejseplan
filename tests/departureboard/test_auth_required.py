@@ -1,4 +1,7 @@
+"""Module containing tests for rejseplanen which requires an API key
+"""
 import pytest
+from requests import Response
 
 
 def test_connection(t_departureboard, key):
@@ -10,5 +13,9 @@ def test_connection(t_departureboard, key):
     """
     if key == "DUMMY_KEY":
         pytest.skip("API key is DUMMY_KEY")
-    assert True
-    
+
+    t_departureboard.add_stop_ids([8600617])
+    response = t_departureboard.update()
+
+    if not isinstance(response, Response):
+        assert False, "Response from server is an unknown type"

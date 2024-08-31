@@ -1,5 +1,5 @@
-import pytest
-
+"""Testcases for getters and setters in departure board
+"""
 
 def test_use_bus_getter(t_departureboard):
     """Test use bus property getter

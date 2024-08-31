@@ -1,11 +1,11 @@
 """This module represents Rejseplanens multideparture board"""
 import logging
 import pickle as pkl
-import requests
 from xml.etree import ElementTree
 
-from . import constants, utils
+import requests
 
+from . import constants, utils
 
 
 class DepartureBoard:
@@ -75,10 +75,10 @@ class DepartureBoard:
         if self._use_metro:
             params["useMetro"] = self._use_metro
 
-        response = self._request(
+        self._response = self._request(
             "multiDepartureBoard", self._header, params, self._timeout
         )
-        return response
+        return self._response
 
     def _construct_header(self, auth_key) -> None:
         self._header = {"Authorization": f"Bearer {auth_key}"}

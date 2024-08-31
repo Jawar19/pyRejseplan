@@ -1,3 +1,5 @@
+"""Conftest document containing setup of fixtures for pytest
+"""
 import os
 import pytest
 from src.pyRejseplan.departureboard import DepartureBoard
