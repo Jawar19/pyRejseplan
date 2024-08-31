@@ -18,7 +18,7 @@ class DepartureBoard:
     _sim: bool = False
     _response: requests.Response = None
     _header: dict
-    _stop_ids: list
+    _stop_ids: list = []
     _timeout: float = 10.0
     _use_bus: bool = True
     _use_train: bool = True
@@ -104,6 +104,15 @@ class DepartureBoard:
         """Clears the class' list of stop id's
         """
         self._stop_ids.clear()
+
+    @property
+    def stop_ids(self) -> list[int]:
+        """returns list of stopids stored in class
+
+        Returns:
+            list
+        """
+        return self._stop_ids
 
     @property
     def timeout(self) -> float:

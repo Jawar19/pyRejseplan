@@ -1,0 +1,623 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:DepartureBoard xmlns:ns0="http://hacon.de/hafas/proxy/hafas-proxy" serverVersion="2.42.1"
+    dialectVersion="2.42" planRtTs="2024-06-10T20:18:27+02:00" requestId="3gw4pzaw2i4hw4cs">
+    <ns0:TechnicalMessages>
+        <ns0:TechnicalMessage key="requestTime">2024-06-10 20:18:42</ns0:TechnicalMessage>
+        <ns0:TechnicalMessage key="backendInfo">ttp=16233#16312 plancode0=o5ces planid=1718016642
+            planid0=1718016642 planid_adr=1716802400 plancode_adr=ofbhu planid_poi=1713166507
+            plancode_poi=l9d0t srvv=5.45.Rejseplanen.15.4.6 (customer/hcudk/release/2024.3.0.1)
+            [2024-04-23] tlibv=TRFVER: rel/dk/10.05.3 2024-04-23 11:06:32 +0200 Rejsekort v10.5.3
+            jno=1</ns0:TechnicalMessage>
+        <ns0:TechnicalMessage key="unmappedQueryParams">useBus,useTrain,useMetro</ns0:TechnicalMessage>
+    </ns0:TechnicalMessages>
+    <ns0:Departure name="Re 277" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="20:15:00"
+        date="2024-06-10" track="3" rtTime="20:18:00" rtDate="2024-06-10" rtTrack="3"
+        reachable="true" direction="Slagelse St." directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#3185#TA#2#DA#100624#1S#8600858#1T#1940#LS#8600605#LT#2049#PU#86#RT#1#CA#004#ZE#277#ZB#Re 277#PC#2#FR#8600858#FT#1940#TO#8600605#TT#2049#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 277" internalName="Re 277" displayNumber="277" num="277"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="277">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 277" internalName="Re 277" displayNumber="277" num="277" catOut="Re"
+            catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re" operatorCode="DSB"
+            operator="DSB" admin="000002" routeIdxFrom="7" routeIdxTo="12" matchId="277">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="7" routeIdxTo="12"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="7" routeIdxTo="12"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="7" routeIdxTo="12" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:platform type="PL" text="3" />
+        <ns0:rtPlatform type="PL" text="3" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 70858" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="20:18:00"
+        date="2024-06-10" track="4" rtTrack="4" reachable="true" direction="Østerport St."
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#2953#TA#1#DA#100624#1S#8600605#1T#1942#LS#8600650#LT#2048#PU#86#RT#1#CA#004#ZE#70858#ZB#Re 70858#PC#2#FR#8600605#FT#1942#TO#8600650#TT#2048#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 70858" internalName="Re 70858" displayNumber="70858" num="70858"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="70858">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 70858" internalName="Re 70858" displayNumber="70858" num="70858"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="5" routeIdxTo="13"
+            matchId="70858">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="5" routeIdxTo="13"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="5" routeIdxTo="13"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="5" routeIdxTo="13" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:Messages>
+            <ns0:Message id="359540" act="true"
+                head="Sporarbejde på strækningen: Tider er opdateret"
+                lead="Læs mere på dsb.dk/sporfornyelse"
+                text="Læs mere på dsb.dk/sporfornyelse (Roskilde St. - København H)" company="DcDK"
+                category="11" products="4" icon="HIM11" routeIdxFrom="0" routeIdxTo="11"
+                sTime="05:00:00" sDate="2024-06-10" eTime="05:00:00" eDate="2024-07-02"
+                modTime="10:30:15" modDate="2024-05-03" dailyStartingAt="00:00:00"
+                dailyDuration="PT23H59M0S">
+                <ns0:affectedStops>
+                    <ns0:StopLocation id="A=1@O=København H@X=12565562@Y=55673063@U=86@L=8600626@"
+                        extId="8600626" isMainMast="true" name="København H" lon="12.565562"
+                        lat="55.673063" products="31">
+                        <ns0:LocationNotes>
+                            <ns0:LocationNote key="FB" type="A" txtN="" />
+                            <ns0:LocationNote key="OZ" type="I" txtN="FL">FL</ns0:LocationNote>
+                            <ns0:LocationNote key="TE" type="I" txtN="8600626///741,74/">
+                                8600626///741,74/</ns0:LocationNote>
+                            <ns0:LocationNote key="TN" type="I" txtN="1001">1001</ns0:LocationNote>
+                            <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                            <ns0:LocationNote key="TR" type="I" txtN="DOT 1">DOT 1</ns0:LocationNote>
+                            <ns0:LocationNote key="TW" type="I" txtN="1">1</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                    </ns0:StopLocation>
+                    <ns0:StopLocation id="A=1@O=Slagelse St.@X=11348998@Y=55407306@U=86@L=8600605@"
+                        extId="8600605" isMainMast="true" name="Slagelse St." lon="11.348998"
+                        lat="55.407306" products="15">
+                        <ns0:LocationNotes>
+                            <ns0:LocationNote key="FB" type="A" txtN="" />
+                            <ns0:LocationNote key="TE" type="I" txtN="8600605///741,74/">
+                                8600605///741,74/</ns0:LocationNote>
+                            <ns0:LocationNote key="TN" type="I" txtN="1130">1130</ns0:LocationNote>
+                            <ns0:LocationNote key="TP" type="I" txtN="TV">TV</ns0:LocationNote>
+                            <ns0:LocationNote key="TR" type="I" txtN="DOT 130">DOT 130</ns0:LocationNote>
+                            <ns0:LocationNote key="TW" type="I" txtN="30">30</ns0:LocationNote>
+                            <ns0:LocationNote key="en" type="I" txtN="200">200</ns0:LocationNote>
+                            <ns0:LocationNote key="ev" type="I" txtN="200">200</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                    </ns0:StopLocation>
+                </ns0:affectedStops>
+                <ns0:validFromStop name="København H"
+                    id="A=1@O=København H@X=12565562@Y=55673063@U=86@L=8600626@" extId="8600626"
+                    routeIdx="0" lon="12.565562" lat="55.673063" minimumChangeDuration="PT6M" />
+                <ns0:validToStop name="Slagelse St."
+                    id="A=1@O=Slagelse St.@X=11348998@Y=55407306@U=86@L=8600605@" extId="8600605"
+                    routeIdx="11" lon="11.348998" lat="55.407306" minimumChangeDuration="PT5M" />
+                <ns0:channel validFromTime="06:47:00" validFromDate="2024-04-02"
+                    validToTime="05:00:00" validToDate="2024-07-02">
+                    <ns0:name>TIMETABLE</ns0:name>
+                    <ns0:url name="www.dsb.dk/sporfornyelse" url="https://www.dsb.dk/sporfornyelse/" />
+                </ns0:channel>
+                <ns0:messageCategory id="11" />
+            </ns0:Message>
+        </ns0:Messages>
+        <ns0:platform type="PL" text="4" />
+        <ns0:rtPlatform type="PL" text="4" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 2260" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="20:29:00"
+        date="2024-06-10" track="5" rtTrack="5" reachable="true" direction="Helsingør St."
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#2424#TA#2#DA#100624#1S#8600810#1T#1950#LS#8600669#LT#2155#PU#86#RT#1#CA#004#ZE#2260#ZB#Re 2260#PC#2#FR#8600810#FT#1950#TO#8600669#TT#2155#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 2260" internalName="Re 2260" displayNumber="2260" num="2260"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="2260">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 2260" internalName="Re 2260" displayNumber="2260" num="2260"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="5" routeIdxTo="24"
+            matchId="2260">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="BE" type="A" priority="0" routeIdxFrom="5" routeIdxTo="24"
+                txtN="Toget har lav indstigning">Toget har lav indstigning</ns0:Note>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="5" routeIdxTo="24"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="5" routeIdxTo="24"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="5" routeIdxTo="24" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:platform type="PL" text="5" />
+        <ns0:rtPlatform type="PL" text="5" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 2277" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="20:31:00"
+        date="2024-06-10" track="3" rtTrack="3" reachable="true" direction="Næstved St."
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#2483#TA#5#DA#100624#1S#8600669#1T#1905#LS#8600810#LT#2109#PU#86#RT#1#CA#004#ZE#2277#ZB#Re 2277#PC#2#FR#8600669#FT#1905#TO#8600810#TT#2109#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 2277" internalName="Re 2277" displayNumber="2277" num="2277"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="2277">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 2277" internalName="Re 2277" displayNumber="2277" num="2277"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="19" routeIdxTo="24"
+            matchId="2277">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="BE" type="A" priority="0" routeIdxFrom="19" routeIdxTo="24"
+                txtN="Toget har lav indstigning">Toget har lav indstigning</ns0:Note>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="19" routeIdxTo="24"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="19" routeIdxTo="24"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="19" routeIdxTo="24" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:platform type="PL" text="3" />
+        <ns0:rtPlatform type="PL" text="3" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 4560" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="20:37:00"
+        date="2024-06-10" track="5" rtTrack="5" reachable="true" direction="København H"
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#2658#TA#1#DA#100624#1S#8600719#1T#2006#LS#8600626#LT#2106#PU#86#RT#1#CA#004#ZE#4560#ZB#Re 4560#PC#2#FR#8600719#FT#2006#TO#8600626#TT#2106#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 4560" internalName="Re 4560" displayNumber="4560" num="4560"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="4560">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 4560" internalName="Re 4560" displayNumber="4560" num="4560"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="5" routeIdxTo="11"
+            matchId="4560">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="BE" type="A" priority="0" routeIdxFrom="5" routeIdxTo="11"
+                txtN="Toget har lav indstigning">Toget har lav indstigning</ns0:Note>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="5" routeIdxTo="11"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="5" routeIdxTo="11"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="5" routeIdxTo="11" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:platform type="PL" text="5" />
+        <ns0:rtPlatform type="PL" text="5" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 70879" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="20:43:00"
+        date="2024-06-10" track="3" rtTrack="3" reachable="true" direction="Slagelse St."
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#3228#TA#0#DA#100624#1S#8600650#1T#2012#LS#8600605#LT#2118#PU#86#RT#1#CA#004#ZE#70879#ZB#Re 70879#PC#2#FR#8600650#FT#2012#TO#8600605#TT#2118#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 70879" internalName="Re 70879" displayNumber="70879" num="70879"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="70879">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 70879" internalName="Re 70879" displayNumber="70879" num="70879"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="8" routeIdxTo="13"
+            matchId="70879">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="8" routeIdxTo="13"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="8" routeIdxTo="13"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="8" routeIdxTo="13" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:Messages>
+            <ns0:Message id="359540" act="true"
+                head="Sporarbejde på strækningen: Tider er opdateret"
+                lead="Læs mere på dsb.dk/sporfornyelse" text="Læs mere på dsb.dk/sporfornyelse"
+                company="DcDK" category="11" products="4" icon="HIM11" routeIdxFrom="2"
+                routeIdxTo="13" sTime="05:00:00" sDate="2024-06-10" eTime="05:00:00"
+                eDate="2024-07-02" modTime="10:30:15" modDate="2024-05-03"
+                dailyStartingAt="00:00:00" dailyDuration="PT23H59M0S">
+                <ns0:affectedStops>
+                    <ns0:StopLocation id="A=1@O=København H@X=12565562@Y=55673063@U=86@L=8600626@"
+                        extId="8600626" isMainMast="true" name="København H" lon="12.565562"
+                        lat="55.673063" products="31">
+                        <ns0:LocationNotes>
+                            <ns0:LocationNote key="FB" type="A" txtN="" />
+                            <ns0:LocationNote key="OZ" type="I" txtN="FL">FL</ns0:LocationNote>
+                            <ns0:LocationNote key="TE" type="I" txtN="8600626///741,74/">
+                                8600626///741,74/</ns0:LocationNote>
+                            <ns0:LocationNote key="TN" type="I" txtN="1001">1001</ns0:LocationNote>
+                            <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                            <ns0:LocationNote key="TR" type="I" txtN="DOT 1">DOT 1</ns0:LocationNote>
+                            <ns0:LocationNote key="TW" type="I" txtN="1">1</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                    </ns0:StopLocation>
+                    <ns0:StopLocation id="A=1@O=Slagelse St.@X=11348998@Y=55407306@U=86@L=8600605@"
+                        extId="8600605" isMainMast="true" name="Slagelse St." lon="11.348998"
+                        lat="55.407306" products="15">
+                        <ns0:LocationNotes>
+                            <ns0:LocationNote key="FB" type="A" txtN="" />
+                            <ns0:LocationNote key="TE" type="I" txtN="8600605///741,74/">
+                                8600605///741,74/</ns0:LocationNote>
+                            <ns0:LocationNote key="TN" type="I" txtN="1130">1130</ns0:LocationNote>
+                            <ns0:LocationNote key="TP" type="I" txtN="TV">TV</ns0:LocationNote>
+                            <ns0:LocationNote key="TR" type="I" txtN="DOT 130">DOT 130</ns0:LocationNote>
+                            <ns0:LocationNote key="TW" type="I" txtN="30">30</ns0:LocationNote>
+                            <ns0:LocationNote key="en" type="I" txtN="200">200</ns0:LocationNote>
+                            <ns0:LocationNote key="ev" type="I" txtN="200">200</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                    </ns0:StopLocation>
+                </ns0:affectedStops>
+                <ns0:validFromStop name="København H"
+                    id="A=1@O=København H@X=12565562@Y=55673063@U=86@L=8600626@" extId="8600626"
+                    routeIdx="2" lon="12.565562" lat="55.673063" minimumChangeDuration="PT6M" />
+                <ns0:validToStop name="Slagelse St."
+                    id="A=1@O=Slagelse St.@X=11348998@Y=55407306@U=86@L=8600605@" extId="8600605"
+                    routeIdx="13" lon="11.348998" lat="55.407306" minimumChangeDuration="PT5M" />
+                <ns0:channel validFromTime="06:47:00" validFromDate="2024-04-02"
+                    validToTime="05:00:00" validToDate="2024-07-02">
+                    <ns0:name>TIMETABLE</ns0:name>
+                    <ns0:url name="www.dsb.dk/sporfornyelse" url="https://www.dsb.dk/sporfornyelse/" />
+                </ns0:channel>
+                <ns0:messageCategory id="11" />
+            </ns0:Message>
+        </ns0:Messages>
+        <ns0:platform type="PL" text="3" />
+        <ns0:rtPlatform type="PL" text="3" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 1562" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="20:51:00"
+        date="2024-06-10" track="5" rtTrack="5" reachable="true" direction="Østerport St."
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#3308#TA#0#DA#100624#1S#8600727#1T#1949#LS#8600650#LT#2124#PU#86#RT#1#CA#004#ZE#1562#ZB#Re 1562#PC#2#FR#8600727#FT#1949#TO#8600650#TT#2124#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 1562" internalName="Re 1562" displayNumber="1562" num="1562"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="1562">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 1562" internalName="Re 1562" displayNumber="1562" num="1562"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="12" routeIdxTo="20"
+            matchId="1562">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="BE" type="A" priority="0" routeIdxFrom="12" routeIdxTo="20"
+                txtN="Toget har lav indstigning">Toget har lav indstigning</ns0:Note>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="12" routeIdxTo="20"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="12" routeIdxTo="20"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="12" routeIdxTo="20" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:platform type="PL" text="5" />
+        <ns0:rtPlatform type="PL" text="5" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 2579" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="20:53:00"
+        date="2024-06-10" track="1" rtTrack="1" reachable="true" direction="Holbæk St."
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#2797#TA#0#DA#100624#1S#8600650#1T#2015#LS#8600719#LT#2123#PU#86#RT#1#CA#004#ZE#2579#ZB#Re 2579#PC#2#FR#8600650#FT#2015#TO#8600719#TT#2123#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 2579" internalName="Re 2579" displayNumber="2579" num="2579"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="2579">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 2579" internalName="Re 2579" displayNumber="2579" num="2579"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="8" routeIdxTo="13"
+            matchId="2579">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="8" routeIdxTo="13"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="8" routeIdxTo="13"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="8" routeIdxTo="13" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:platform type="PL" text="1" />
+        <ns0:rtPlatform type="PL" text="1" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 2562" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="21:07:00"
+        date="2024-06-10" track="5" rtTrack="5" reachable="true" direction="Østerport St."
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#2702#TA#0#DA#100624#1S#8600719#1T#2036#LS#8600650#LT#2145#PU#86#RT#1#CA#004#ZE#2562#ZB#Re 2562#PC#2#FR#8600719#FT#2036#TO#8600650#TT#2145#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 2562" internalName="Re 2562" displayNumber="2562" num="2562"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="2562">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 2562" internalName="Re 2562" displayNumber="2562" num="2562"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="5" routeIdxTo="13"
+            matchId="2562">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="BE" type="A" priority="0" routeIdxFrom="5" routeIdxTo="13"
+                txtN="Toget har lav indstigning">Toget har lav indstigning</ns0:Note>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="5" routeIdxTo="13"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="5" routeIdxTo="13"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="5" routeIdxTo="13" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:platform type="PL" text="5" />
+        <ns0:rtPlatform type="PL" text="5" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 1579" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="21:09:00"
+        date="2024-06-10" track="2" rtTrack="2" reachable="true" direction="Kalundborg St."
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#3132#TA#0#DA#100624#1S#8600650#1T#2036#LS#8600727#LT#2210#PU#86#RT#1#CA#004#ZE#1579#ZB#Re 1579#PC#2#FR#8600650#FT#2036#TO#8600727#TT#2210#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 1579" internalName="Re 1579" displayNumber="1579" num="1579"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="1579">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 1579" internalName="Re 1579" displayNumber="1579" num="1579"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="8" routeIdxTo="20"
+            matchId="1579">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="8" routeIdxTo="20"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="8" routeIdxTo="20"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="8" routeIdxTo="20" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:platform type="PL" text="2" />
+        <ns0:rtPlatform type="PL" text="2" />
+    </ns0:Departure>
+    <ns0:Departure name="Re 70862" type="ST" stop="Roskilde St."
+        stopid="A=1@O=Roskilde St.@X=12088550@Y=55639093@U=86@L=8600617@" stopExtId="8600617"
+        lon="12.08855" lat="55.639093" isMainMast="true" prognosisType="PROGNOSED" time="21:18:00"
+        date="2024-06-10" track="4" rtTrack="4" reachable="true" direction="Østerport St."
+        directionFlag="1">
+        <ns0:JourneyDetailRef
+            ref="2|#VN#1#ST#1718016642#PI#0#ZI#2953#TA#2#DA#100624#1S#8600605#1T#2042#LS#8600650#LT#2148#PU#86#RT#1#CA#004#ZE#70862#ZB#Re 70862#PC#2#FR#8600605#FT#2042#TO#8600650#TT#2148#" />
+        <ns0:JourneyStatus>P</ns0:JourneyStatus>
+        <ns0:ProductAtStop name="Re 70862" internalName="Re 70862" displayNumber="70862" num="70862"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" matchId="70862">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:ProductAtStop>
+        <ns0:Product name="Re 70862" internalName="Re 70862" displayNumber="70862" num="70862"
+            catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
+            operatorCode="DSB" operator="DSB" admin="000002" routeIdxFrom="5" routeIdxTo="13"
+            matchId="70862">
+            <ns0:icon res="prod_ic" />
+            <ns0:operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
+        </ns0:Product>
+        <ns0:Notes>
+            <ns0:Note key="CR" type="A" priority="0" routeIdxFrom="5" routeIdxTo="13"
+                txtN="Cykelreservering kræves">Cykelreservering kræves</ns0:Note>
+            <ns0:Note key="TD" type="A" priority="200" routeIdxFrom="5" routeIdxTo="13"
+                txtN="Mulighed for internet">Mulighed for internet</ns0:Note>
+            <ns0:Note key="CT" type="I" routeIdxFrom="5" routeIdxTo="13" txtN="50ae30">50ae30</ns0:Note>
+            <ns0:Note key="FB" type="A" txtN="" />
+            <ns0:Note key="OZ" type="I" txtN="ABCH">ABCH</ns0:Note>
+            <ns0:Note key="TE" type="I" txtN="8600617///741,74/">8600617///741,74/</ns0:Note>
+            <ns0:Note key="TN" type="I" txtN="1008">1008</ns0:Note>
+            <ns0:Note key="TP" type="I" txtN="TH">TH</ns0:Note>
+            <ns0:Note key="TR" type="I" txtN="DOT 8">DOT 8</ns0:Note>
+            <ns0:Note key="TW" type="I" txtN="8">8</ns0:Note>
+            <ns0:Note key="en" type="I" txtN="200">200</ns0:Note>
+            <ns0:Note key="ev" type="I" txtN="200">200</ns0:Note>
+        </ns0:Notes>
+        <ns0:Messages>
+            <ns0:Message id="359540" act="true"
+                head="Sporarbejde på strækningen: Tider er opdateret"
+                lead="Læs mere på dsb.dk/sporfornyelse"
+                text="Læs mere på dsb.dk/sporfornyelse (Roskilde St. - København H)" company="DcDK"
+                category="11" products="4" icon="HIM11" routeIdxFrom="0" routeIdxTo="11"
+                sTime="05:00:00" sDate="2024-06-10" eTime="05:00:00" eDate="2024-07-02"
+                modTime="10:30:15" modDate="2024-05-03" dailyStartingAt="00:00:00"
+                dailyDuration="PT23H59M0S">
+                <ns0:affectedStops>
+                    <ns0:StopLocation id="A=1@O=København H@X=12565562@Y=55673063@U=86@L=8600626@"
+                        extId="8600626" isMainMast="true" name="København H" lon="12.565562"
+                        lat="55.673063" products="31">
+                        <ns0:LocationNotes>
+                            <ns0:LocationNote key="FB" type="A" txtN="" />
+                            <ns0:LocationNote key="OZ" type="I" txtN="FL">FL</ns0:LocationNote>
+                            <ns0:LocationNote key="TE" type="I" txtN="8600626///741,74/">
+                                8600626///741,74/</ns0:LocationNote>
+                            <ns0:LocationNote key="TN" type="I" txtN="1001">1001</ns0:LocationNote>
+                            <ns0:LocationNote key="TP" type="I" txtN="TH">TH</ns0:LocationNote>
+                            <ns0:LocationNote key="TR" type="I" txtN="DOT 1">DOT 1</ns0:LocationNote>
+                            <ns0:LocationNote key="TW" type="I" txtN="1">1</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                    </ns0:StopLocation>
+                    <ns0:StopLocation id="A=1@O=Slagelse St.@X=11348998@Y=55407306@U=86@L=8600605@"
+                        extId="8600605" isMainMast="true" name="Slagelse St." lon="11.348998"
+                        lat="55.407306" products="15">
+                        <ns0:LocationNotes>
+                            <ns0:LocationNote key="FB" type="A" txtN="" />
+                            <ns0:LocationNote key="TE" type="I" txtN="8600605///741,74/">
+                                8600605///741,74/</ns0:LocationNote>
+                            <ns0:LocationNote key="TN" type="I" txtN="1130">1130</ns0:LocationNote>
+                            <ns0:LocationNote key="TP" type="I" txtN="TV">TV</ns0:LocationNote>
+                            <ns0:LocationNote key="TR" type="I" txtN="DOT 130">DOT 130</ns0:LocationNote>
+                            <ns0:LocationNote key="TW" type="I" txtN="30">30</ns0:LocationNote>
+                            <ns0:LocationNote key="en" type="I" txtN="200">200</ns0:LocationNote>
+                            <ns0:LocationNote key="ev" type="I" txtN="200">200</ns0:LocationNote>
+                        </ns0:LocationNotes>
+                    </ns0:StopLocation>
+                </ns0:affectedStops>
+                <ns0:validFromStop name="København H"
+                    id="A=1@O=København H@X=12565562@Y=55673063@U=86@L=8600626@" extId="8600626"
+                    routeIdx="0" lon="12.565562" lat="55.673063" minimumChangeDuration="PT6M" />
+                <ns0:validToStop name="Slagelse St."
+                    id="A=1@O=Slagelse St.@X=11348998@Y=55407306@U=86@L=8600605@" extId="8600605"
+                    routeIdx="11" lon="11.348998" lat="55.407306" minimumChangeDuration="PT5M" />
+                <ns0:channel validFromTime="06:47:00" validFromDate="2024-04-02"
+                    validToTime="05:00:00" validToDate="2024-07-02">
+                    <ns0:name>TIMETABLE</ns0:name>
+                    <ns0:url name="www.dsb.dk/sporfornyelse" url="https://www.dsb.dk/sporfornyelse/" />
+                </ns0:channel>
+                <ns0:messageCategory id="11" />
+            </ns0:Message>
+        </ns0:Messages>
+        <ns0:platform type="PL" text="4" />
+        <ns0:rtPlatform type="PL" text="4" />
+    </ns0:Departure>
+</ns0:DepartureBoard>

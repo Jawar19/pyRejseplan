@@ -31,3 +31,10 @@ version_file = "_version.py"
 Homepage = "https://github.com/Jawar19/pyRejseplan"
 Issues = "https://github.com/Jawar19/pyRejseplan/issues"
 Repository = "https://github.com/Jawar19/pyRejseplan"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--import-mode=importlib -rs"
+markers = [
+    "auth_req: Marks tests where valid auth key is required",
+]

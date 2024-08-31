@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "bierner.markdown-preview-github-styles",
+        "charliermarsh.ruff",
+        "ms-python.python"
+    ]
+}
