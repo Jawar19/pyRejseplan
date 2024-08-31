@@ -21,6 +21,15 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    'requests ~= 2.32.2',
+]
+
+[project.optional-dependencies]
+tests = [
+  'pytest < 6',
+]
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
