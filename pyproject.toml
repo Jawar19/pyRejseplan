@@ -1,7 +1,9 @@
 [build-system]
 requires = [
+    "build",
     "setuptools>=61.0",
-    "setuptools-scm>=8.0"
+    "setuptools-scm[toml]>=8.0",
+    "wheel",
     ]
 build-backend = "setuptools.build_meta"
 
@@ -9,6 +11,9 @@ build-backend = "setuptools.build_meta"
 name = "pyRejseplan"
 dynamic = ["version"]
 authors = [
+  { name="Jacob Warrer", email="Jacobwarrer@gmail.com" },
+]
+maintainers = [
   { name="Jacob Warrer", email="Jacobwarrer@gmail.com" },
 ]
 description = "Python interface with rejseplanens API 2.0 based on HAFAS"
@@ -30,19 +35,24 @@ tests = [
   'pytest < 6',
 ]
 dev = [
-  'ruff'
+  'ruff',
+  'twine',
+  "build",
 ]
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools_scm]
-version_file = "_version.py"
+version_file = "src/py_rejseplan/version/__version__.py"
 
 [project.urls]
 Homepage = "https://github.com/Jawar19/pyRejseplan"
 Issues = "https://github.com/Jawar19/pyRejseplan/issues"
 Repository = "https://github.com/Jawar19/pyRejseplan"
+
+[project.scripts]
+pyRejseplan = "py_rejseplan.__main__:main"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
