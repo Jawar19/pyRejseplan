@@ -5,15 +5,16 @@ from xml.etree import ElementTree
 
 import requests
 
-from . import constants, utils
+from py_rejseplan import constants
+from py_rejseplan.dataclasses import departure
 
+_logger = logging.getLogger(__name__)
 
 class DepartureBoard:
     """Multidepartureboard wrapping class. latest request is stored in the
     class and translated into python dataclasses representing the data recieved
     from Rejseplanen API.
     """
-    _logger = logging.getLogger(__name__)
 
     _sim: bool = False
     _response: requests.Response = None
@@ -26,6 +27,7 @@ class DepartureBoard:
 
     def __init__(self, auth_key: str, filepath:str = None) -> None:
         """Initialize the departure board wrapper
+        if filepath is provided the class will load the simulation data from
 
         Arguments:
             auth_key -- Private key for API requests
@@ -33,23 +35,24 @@ class DepartureBoard:
         Keyword Arguments:
             filepath -- path to simulation data (default: {None})
         """
-        self._logger.debug("__init__ called")
+        _logger.debug("initializing...")
         self._construct_header(auth_key)
 
         if filepath:
-            self._logger.warning("Simulation data loaded from path %s", filepath)
+            _logger.warning("Simulation data loaded from path %s", filepath)
             with open(filepath, "rb") as pkl_file:
                 self._response = pkl.load(pkl_file)
                 self._sim = True
 
     @staticmethod
     def _request(service, headers, params, timeout):
+        """Request function for the Rejseplanen API"""
         url = constants.RESOURCE + service
         try:
             response = requests.get(url, params, headers=headers, timeout=timeout)
         except requests.exceptions.RequestException as ex:
             print(ex)
-            # TODO Make custom exceptions
+            # NOTE Make custom exceptions
         if response.status_code == requests.codes["OK"]:
             return response
         return None
@@ -63,6 +66,9 @@ class DepartureBoard:
         Returns:
             Valid XML response according to rejseplanen API
         """
+        if self._sim:
+            return self._response
+
         params: dict = {}
         if len(self._stop_ids) < 1:
             raise ValueError("Need at least one id.")
@@ -79,24 +85,33 @@ class DepartureBoard:
             "multiDepartureBoard", self._header, params, self._timeout
         )
         return self._response
-    
+
     def get_departures(self):
         """Updates the internal list of departures from the ID's provided to
         the class.
         """
         response = self.update()
         xmlroot: ElementTree.Element = ElementTree.fromstring(response.text)
+        namespace = "{http://hacon.de/hafas/proxy/hafas-proxy}"
 
-        print(xmlroot.tag)
+        departures = xmlroot.findall(f".//{namespace}Departure")
+        result = []
+        for i, depart in enumerate(departures):
+            _logger.debug("Departure %4d --> %15s @ %10s ==> %15s [%s]",
+                          i, depart.attrib.get("name"), depart.attrib.get("time"),
+                          depart.attrib.get("direction"), depart.attrib.get("prognosisType"))
+            result.append(departure.parse_departure(depart.attrib))
 
-        for child in xmlroot:
-            print(child.tag, child.attrib)
+        # Need to make a list of departure objects and return them.
+
         # iterate trough the response and create a list of departures, this
         # could be provides for later use as a generator or just returned as
         # a list.
-        return []
+        return result
 
     def _construct_header(self, auth_key) -> None:
+        """Constructs the header for the API requests
+        This is embedding the auth_key in the header"""
         self._header = {"Authorization": f"Bearer {auth_key}"}
 
     def add_stop_ids(self, ids:list) -> None:
@@ -141,6 +156,15 @@ class DepartureBoard:
 
     @timeout.setter
     def timeout(self, value: float) -> None:
+        """Timeout property in seconds
+
+        Arguments:
+            value -- input value in seconds
+
+        Raises:
+            ValueError: negative value
+            ValueError: non-zero value
+        """
         if value < 0:
             raise ValueError("Timeout can not be negative number")
         if value == 0:

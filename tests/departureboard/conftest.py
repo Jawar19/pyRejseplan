@@ -2,10 +2,10 @@
 """
 import os
 import pytest
-from src.pyRejseplan.departureboard import DepartureBoard
+from src.py_rejseplan.departureboard import DepartureBoard
 
-@pytest.fixture
-def key():
+@pytest.fixture(name="key")
+def fixture_key():
     """Reading authkey from auth file in root
 
     Returns:
@@ -31,3 +31,4 @@ def t_departureboard(key):
     """Fixture for departureboard testing"""
 
     return DepartureBoard(key, r'requestData\mdbRoskildeSt.pkl')
+    # return DepartureBoard(key)
