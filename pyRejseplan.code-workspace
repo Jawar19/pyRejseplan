@@ -15,7 +15,6 @@
 			]
 		},
 		"autoDocstring.docstringFormat": "pep257",
-		// "autoDocstring.customTemplatePath": "",
 		"autoDocstring.generateDocstringOnEnter": true,
 		"autoDocstring.includeExtendedSummary": false,
 		"autoDocstring.includeName": false,
@@ -26,7 +25,8 @@
 		"python.analysis.inlayHints.pytestParameters": true,
 		"python.analysis.autoFormatStrings": true,
 		"python.analysis.completeFunctionParens": true,
-		"python.analysis.completionOverrideExperiment": true
+		"pylint.enabled": false,
+		"ruff.enable": true
 	},
 	"launch": {
 		"version": "0.2.0",
