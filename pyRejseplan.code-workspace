@@ -10,7 +10,7 @@
 		},
 		"[python]": {
 			"editor.rulers": [
-				79,
+				88,
 				120
 			]
 		},
@@ -21,7 +21,12 @@
 		"autoDocstring.includeName": false,
 		"autoDocstring.startOnNewLine": false,
 		"autoDocstring.guessTypes": true,
-		"autoDocstring.quoteStyle": "\"\"\""
+		"autoDocstring.quoteStyle": "\"\"\"",
+		"python.analysis.inlayHints.callArgumentNames": "partial",
+		"python.analysis.inlayHints.pytestParameters": true,
+		"python.analysis.autoFormatStrings": true,
+		"python.analysis.completeFunctionParens": true,
+		"python.analysis.completionOverrideExperiment": true
 	},
 	"launch": {
 		"version": "0.2.0",
