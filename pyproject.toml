@@ -44,7 +44,7 @@ dev = [
 where = ["src"]
 
 [tool.setuptools_scm]
-version_file = "py_rejseplan/version/__version__.py"
+version_file = "src/py_rejseplan/version/__version__.py"
 
 [project.urls]
 Homepage = "https://github.com/Jawar19/pyRejseplan"
