@@ -52,7 +52,7 @@ Issues = "https://github.com/Jawar19/pyRejseplan/issues"
 Repository = "https://github.com/Jawar19/pyRejseplan"
 
 [project.scripts]
-pyRejseplan = "src.py_rejseplan.__main__:main"
+pyRejseplan = "py_rejseplan.__main__:main"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
