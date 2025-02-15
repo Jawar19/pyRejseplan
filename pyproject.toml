@@ -27,7 +27,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    'requests ~= 2.32.2',
+    'requests >= 2.32.2',
 ]
 
 [project.optional-dependencies]
@@ -44,7 +44,7 @@ dev = [
 where = ["src"]
 
 [tool.setuptools_scm]
-version_file = "src/py_rejseplan/version/__version__.py"
+version_file = "py_rejseplan/version/__version__.py"
 
 [project.urls]
 Homepage = "https://github.com/Jawar19/pyRejseplan"
@@ -52,7 +52,7 @@ Issues = "https://github.com/Jawar19/pyRejseplan/issues"
 Repository = "https://github.com/Jawar19/pyRejseplan"
 
 [project.scripts]
-pyRejseplan = "py_rejseplan.__main__:main"
+pyRejseplan = "src.py_rejseplan.__main__:main"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
