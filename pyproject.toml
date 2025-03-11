@@ -28,7 +28,8 @@ classifiers = [
 ]
 dependencies = [
     'requests >= 2.32.2',
-    'urllib3>=1.26.5,<2'
+    'urllib3>=1.26.5,<2', 
+    'setuptools-scm'
 ]
 
 [project.optional-dependencies]
