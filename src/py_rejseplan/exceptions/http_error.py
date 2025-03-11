@@ -1,7 +1,9 @@
-"""Exception class for HTTP errors during REST API calls
-"""
+"""Exception class for HTTP errors during REST API calls"""
+
+
 class RPHTTPError(RuntimeError):
     """Raised when the HTTP response code is not 200."""
+
     def __init__(self, message, status_code=None):
         super().__init__(message)
         self.message = message
@@ -9,5 +11,5 @@ class RPHTTPError(RuntimeError):
 
     def __str__(self):
         if self.status_code:
-            return f"RPHTTPError (status code: {self.status_code}): {self.message}"
-        return f"RPHTTPError: {self.message}"
+            return f'RPHTTPError (status code: {self.status_code}): {self.message}'
+        return f'RPHTTPError: {self.message}'

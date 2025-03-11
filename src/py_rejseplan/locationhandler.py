@@ -53,9 +53,9 @@ class LocationHandler:
             list: A list of possible locations matching the given address string.
         """
         # Implementation goes here
-        _logger.debug("Address lookup")
+        _logger.debug('Address lookup')
 
-    def coordinate_lookup(self, latitude: float, longitude:float) -> list:
+    def coordinate_lookup(self, latitude: float, longitude: float) -> list:
         """
         Looks up location information based on provided latitude and longitude coordinates.
         Args:
@@ -64,7 +64,8 @@ class LocationHandler:
         Returns:
             list: A list containing location information corresponding to the provided coordinates.
         """
-        _logger.debug("Geo location lookup")
+        _logger.debug('Geo location lookup')
+
 
 # def request_location(auth_key:str, location):
 #     service = "location.name"
@@ -99,10 +100,10 @@ class LocationHandler:
 
 
 #     else:
-        # response: requests.Response = requests.get(url,
-        #                                            headers=headers,
-        #                                            params={"input": location}
-        #                                            )
+# response: requests.Response = requests.get(url,
+#                                            headers=headers,
+#                                            params={"input": location}
+#                                            )
 #         xmlroot: ElementTree.Element = ElementTree.fromstring(response.content)
 #         xmltree = ElementTree.ElementTree(xmlroot)
 

@@ -1,5 +1,5 @@
 """py_rejseplan package
-This package provides various modules to interact with the Rejseplanen API, 
+This package provides various modules to interact with the Rejseplanen API,
 which is used for retrieving public transportation data in Denmark.
 Modules:
 - constants: Contains constant values used throughout the package.

@@ -3,7 +3,9 @@ This module provides utility functions for working with HTTP requests.
 Functions:
     dump_prepared_request(prepared_request: PreparedRequest):
 """
+
 from requests.models import PreparedRequest
+
 
 def dump_prepared_request(prepared_request: PreparedRequest):
     """
@@ -16,16 +18,16 @@ def dump_prepared_request(prepared_request: PreparedRequest):
         None
     """
     # Print the request line
-    print(" REQUEST LINE ".center(50, "-"))
-    print(f"{prepared_request.method} {prepared_request.url} HTTP/1.1")
+    print(' REQUEST LINE '.center(50, '-'))
+    print(f'{prepared_request.method} {prepared_request.url} HTTP/1.1')
 
     # Print the headers
-    print(" HEADER ".center(50, "-"))
+    print(' HEADER '.center(50, '-'))
     for header, value in prepared_request.headers.items():
-        print(f"{header}: {value}")
+        print(f'{header}: {value}')
 
     # Print the body if it exists
-    print(" BODY ".center(50, "-"))
+    print(' BODY '.center(50, '-'))
     if prepared_request.body:
-        print(f"\n{prepared_request.body}")
-    print("-".center(50, "-"))
+        print(f'\n{prepared_request.body}')
+    print('-'.center(50, '-'))
