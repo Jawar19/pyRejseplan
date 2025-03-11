@@ -26,68 +26,54 @@ if (-not $commitMessage) {
 }
 
 # Install and activate the Python environment
-python -m venv .venv
+if (-Not (Test-Path -Path "./.venv")) {
+    python -m venv .venv
+}
 ./.venv/Scripts/activate
 pip install -e .[dev]
 
 # Get the version using setuptools_scm
-$version = python -m setuptools_scm
+$version = python -m setuptools_scm --strip-dev
 if (-not $version) {
     Write-Host "Failed to retrieve version using setuptools_scm."
     exit 1
 }
-$newVersion = $version.Trim()
+$version = $version.Trim()
+
+# Extract the major.minor.build part from the version string
+if ($version -match '^(\d+)\.(\d+)\.(\d+)?$') {
+    Write-Information "Valid version format, new version is $version"
+} else {
+    Write-Host "Invalid version format. Expected format: major.minor.build, got $version"
+    exit 1
+}
 
 # Commit the changes and create a new git tag
-git add .
-git commit -m $commitMessage
-git tag -a $newVersion -m $commitMessage
-git push origin --tags
+# git add .
+# git commit -m $commitMessage
+git tag -a "v$version" -m $commitMessage
+# git push origin --tags
 
 # Build the distribution files using python -m build
 python -m build
 
-$version = Get-Content $versionFilePath -Raw
-$version = $version.Trim()
+# $files = Get-ChildItem -Path "dist" -Filter "*$newVersion*" -File
+# if ($files.Count -eq 0) {
+#     Write-Host "No files found matching version $newVersion in the dist folder."
+#     exit 1
+# }
+# # Upload the distribution files using Twine
+# twine upload $files
 
-# Parse the version and bump the build number
-if ($version -match '^(\d+)\.(\d+)\.(\d+)$') {
-    $major = [int]$matches[1]
-    $minor = [int]$matches[2]
-    $build = [int]$matches[3]
-    $newVersion = "$major.$minor.$build"
-} else {
-    Write-Host "Invalid version format. Expected format: major.minor.build"
-    exit 1
-}
+# # Check if GitHub CLI is available
+# if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
+#     Write-Host "GitHub CLI (gh) is not installed or not available in the PATH."
+#     Write-Host "You can install it using winget with the following command:"
+#     Write-Host "winget install --id GitHub.cli"
+#     exit 1
+# }
 
-# Get the commit message from the user
-param (
-    [string]$commitMessage
-)
-
-if (-not $commitMessage) {
-    Write-Host "Commit message is required."
-    exit 1
-}
-
-$files = Get-ChildItem -Path "dist" -Filter "*$newVersion*" -File
-if ($files.Count -eq 0) {
-    Write-Host "No files found matching version $newVersion in the dist folder."
-    exit 1
-}
-# Upload the distribution files using Twine
-twine upload $files
-
-# Check if GitHub CLI is available
-if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
-    Write-Host "GitHub CLI (gh) is not installed or not available in the PATH."
-    Write-Host "You can install it using winget with the following command:"
-    Write-Host "winget install --id GitHub.cli"
-    exit 1
-}
-
-# Create a new GitHub release and upload the files
-$releaseNotes = "Release version $newVersion\n$commitMessage"
-gh release create $newVersion $files --title "Release $newVersion" --notes $releaseNotes --latest
+# # Create a new GitHub release and upload the files
+# $releaseNotes = "Release version $newVersion\n$commitMessage"
+# gh release create $newVersion $files --title "Release $newVersion" --notes $releaseNotes --latest
 
