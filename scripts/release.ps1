@@ -62,18 +62,22 @@ if ($files.Count -eq 0) {
     Write-Host "No files found matching version $newVersion in the dist folder."
     exit 1
 }
+Write-Debug "Files to upload $files"
 # Upload the distribution files using Twine
-twine upload $files
+# twine upload $files TODO use pypi testserver to upload these tests to
 
-# Check if GitHub CLI is available
-if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
-    Write-Host "GitHub CLI (gh) is not installed or not available in the PATH."
-    Write-Host "You can install it using winget with the following command:"
-    Write-Host "winget install --id GitHub.cli"
-    exit 1
-}
+# twine upload --repository testpypi dist/*
 
-# Create a new GitHub release and upload the files
-$releaseNotes = "Release version $newVersion\n$commitMessage"
-gh release create $newVersion $files --title "Release $newVersion" --notes $releaseNotes --latest
+
+# # Check if GitHub CLI is available
+# if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
+#     Write-Host "GitHub CLI (gh) is not installed or not available in the PATH."
+#     Write-Host "You can install it using winget with the following command:"
+#     Write-Host "winget install --id GitHub.cli"
+#     exit 1
+# }
+
+# # Create a new GitHub release and upload the files
+# $releaseNotes = "Release version $newVersion\n$commitMessage"
+# gh release create $newVersion $files --title "Release $newVersion" --notes $releaseNotes --latest
 
