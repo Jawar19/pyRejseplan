@@ -62,7 +62,7 @@ if ($files.Count -eq 0) {
     Write-Host "No files found matching version $newVersion in the dist folder."
     exit 1
 }
-Write-Debug "Files to upload $files"
+Write-Information "Files to upload $files"
 # Upload the distribution files using Twine
 # twine upload $files TODO use pypi testserver to upload these tests to
 
