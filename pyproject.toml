@@ -34,14 +34,14 @@ dependencies = [
     "pydantic>=2.10.6",
 ]
 
-[project.optional-dependencies]
-tests = [
-  'pytest < 6',
-]
+[dependency-groups]
 dev = [
   'ruff',
   'twine',
-  "build",
+  'build',
+]
+test = [
+  'pytest > 6',
 ]
 
 [tool.setuptools.packages.find]
@@ -61,8 +61,13 @@ pyRejseplan = "py_rejseplan.__main__:main"
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "--import-mode=importlib -rs"
+log_cli = true
+log_cli_level = "DEBUG"
 markers = [
     "auth_req: Marks tests where valid auth key is required",
+]
+testpaths = [
+    "tests",
 ]
 
 [tool.ruff]

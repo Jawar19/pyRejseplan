@@ -162,6 +162,9 @@ cython_debug/
 # ignore .key files
 *.key
 
+# Ignore UV lock files
+*.lock
+
 
 .vscode/*
 
