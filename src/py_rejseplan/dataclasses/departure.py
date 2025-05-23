@@ -1,91 +1,72 @@
-"""Module containing representation of a departures from Rejseplanen"""
+import datetime
+import logging
+from pydantic_xml import BaseXmlModel, attr, element
 
-from dataclasses import dataclass, field
-from datetime import datetime, date as dt_date, time as dt_time
-import enum
+import py_rejseplan.dataclasses.constants as constants
+
+from .product_at_stop import ProductAtStop
+from .product import Product
+from .journey_detail_ref import JourneyDetailRef
+from .note import Notes
+
+_LOGGER = logging.getLogger(__name__)
 
 
-class PrognosisType(enum.Enum):
-    """Enum to describe prognosis type from the REST API"""
-
-    PROGNOSED = 'PROGNOSED'
-    MANUAL = "MANUAL"
-    REPORTED = "REPORTED"
-    CORRECTED = "CORRECTED"
-    CALCULATED = "CALCULATED"
-    UNKNOWN = 'UNKNOWN'
-
-class LocationType(enum.Enum):
-    """Location type enum
-
-    ### From documentation:
-    The attribute type specifies the type of the departure location.
-    Valid values are ST (stop/station), ADR(address), POI (point of interest),
-    CRD (coordinate), MCP (mode change point) or HL (hailing point)
+class Departure(
+    BaseXmlModel,
+    tag='Departure',
+    ns="",
+    nsmap=constants.NSMAP,
+    search_mode='ordered',
+    ):
+    """Departure class for parsing XML data from the Rejseplanen API.
+    This class is used to represent the departure data returned by the API.
+    It extends the BaseXmlModel from pydantic_xml to provide XML parsing capabilities.
     """
+    name: str = attr()
+    type: str = attr()
+    stop: str = attr()
+    stopid: str = attr()
+    stopExtId: int = attr()
+    lon: float = attr()
+    lat: float = attr()
+    isMainMast: bool = attr()
+    prognosisType: str = attr()
+    time: datetime.time = attr()
+    date: datetime.date = attr()
+    track: int = attr()
+    rtTime: datetime.time = attr()
+    rtDate: datetime.date = attr()
+    rtTrack: int = attr()
+    reachable: bool = attr()
+    direction: str = attr()
+    directionFlag: int = attr()
 
-    ST = 'stop/station'
-    ADR = 'address'
-    POI = 'point of interest'
-    CRD = 'coordinate'
-    MCP = 'mode change point'
-    HL = 'hailing point'
-    UNKNOWN = 'UNKNOWN'
-
-
-@dataclass
-class Departure:
-    """Simple departure dataclass
-
-    A list of dictionaries, each containing departure name, time, direction and type.
-        The results from all stops are mixed, but can be filtered by stop.
-    """
-
-    # pylint: disable=too-many-instance-attributes, C0103
-    # These are all essential parameters from the REST API, names are created
-    # with same names as in the REST API from Rejseplanen
-    name: str = 'Unknown'
-    type: LocationType = LocationType.UNKNOWN
-    stop: str = 'Unknown'
-    stopid: str = 'Unknown'
-    stopExtId: int = 0
-    lon: float = 0.0
-    lat: float = 0.0
-    isMainMast: bool = False
-    prognosisType: PrognosisType = PrognosisType.UNKNOWN
-    time: dt_time = field(default_factory=lambda: dt_time(0, 0, 0))
-    date: dt_date = field(default_factory=dt_date.today)
-    track: int = -1
-    rtTrack: int = -1
-    reachable: bool = False
-    direction: str = 'Unknown'
-    directionFlag: int = -1
-
-
-def parse_departure(data: dict) -> Departure:
-    """Convert dictionary to Departure dataclass.
-
-    TODO: This needs to be robust enough to handle missing dict values.
-    """
-    return Departure(
-        name=data.get('name', 'Unknown'),
-        type=LocationType[data['type']]
-        if data.get('type') in LocationType.__members__
-        else LocationType.UNKNOWN,
-        stop=data.get('stop', 'Unknown'),
-        stopid=data.get('stopid', 'Unknown'),
-        stopExtId=int(data.get('stopExtId', 0)),
-        lon=float(data.get('lon', 0.0)),
-        lat=float(data.get('lat', 0.0)),
-        isMainMast=data.get('isMainMast', 'false').lower() == 'true',  # Convert to bool
-        prognosisType=PrognosisType[data.get('prognosisType')]
-        if data.get('prognosisType') in PrognosisType.__members__
-        else PrognosisType.UNKNOWN,
-        time=datetime.strptime(data.get('time', '00:00:00'), '%H:%M:%S').time(),
-        date=datetime.strptime(data.get('date', '1970-01-01'), '%Y-%m-%d').date(),
-        track=int(data.get('track', -1)),
-        rtTrack=int(data.get('rtTrack', -1)),
-        reachable=data.get('reachable', 'false').lower() == 'true',  # Convert to bool
-        direction=data.get('direction', 'Unknown'),
-        directionFlag=int(data.get('directionFlag', -1)),
+    # Subelements
+    journeyDetailRef: JourneyDetailRef = element(
+        default_factory=JourneyDetailRef,
+        tag='JourneyDetailRef'
+    )
+    journeyStatus: str = element(
+        default_factory=str,
+        tag='JourneyStatus'
+    )
+    productAtStop: ProductAtStop = element(
+        default_factory=list,
+        tag='ProductAtStop'
+    )
+    product: Product = element(
+        default_factory=list,
+        tag='Product'
+    )
+    notes: Notes = element(
+        tag='Notes',  # This navigates through the Notes container
+    )
+    platform: dict[str, str] = element(
+        default_factory=dict,
+        tag='platform'
+    )
+    rtPlatform: dict[str, str] = element(
+        default_factory=dict,
+        tag='rtPlatform'
     )
