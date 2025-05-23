@@ -2,6 +2,7 @@ import logging
 from .base import baseAPIClient
 
 from py_rejseplan.constants import RESOURCE as BASE_URL
+from py_rejseplan.dataclasses.departure_board import DepartureBoard
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -19,6 +20,25 @@ class departuresAPIClient(baseAPIClient):
         _LOGGER.debug('Initializing departuresAPIClient')
         super().__init__(BASE_URL, auth_key, timeout)
 
+    def parse_response(self, response: str) -> DepartureBoard:
+        """
+        Parse the XML response from the API and return a dictionary representation of the data.
+        Args:
+            response (str): The XML response from the API.
+
+        Returns:
+            dict: Parsed data as a dictionary.
+        """
+        if response is None:
+            _LOGGER.error('Response is None')
+            return None
+        try:
+            departure_board = DepartureBoard.from_xml(response)
+            return departure_board
+        except Exception as e:
+            _LOGGER.error('Error parsing response: %s', e)
+            return None
+
     def get_departures(
             self,
             stop_ids: list[int],
@@ -26,7 +46,7 @@ class departuresAPIClient(baseAPIClient):
             use_bus: bool = True,
             use_train: bool = True,
             use_metro: bool = True,
-        ) -> dict:
+        ) -> DepartureBoard:
         """Get departures for the given stop IDs.
         Args:
             stop_ids (list[int]): List of stop IDs to get departures for.
@@ -53,4 +73,8 @@ class departuresAPIClient(baseAPIClient):
         if response is None:
             _LOGGER.error('Failed to get departures')
             return None
-        return response
+        departure_board = self.parse_response(response)
+        if departure_board is None:
+            _LOGGER.error('Failed to parse departures')
+            return None
+        return departure_board
