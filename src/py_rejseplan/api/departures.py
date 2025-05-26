@@ -73,8 +73,8 @@ class departuresAPIClient(baseAPIClient):
         if response is None:
             _LOGGER.error('Failed to get departures')
             return None
-        departure_board = self.parse_response(response)
+        departure_board = self.parse_response(response.text)
         if departure_board is None:
             _LOGGER.error('Failed to parse departures')
             return None
-        return departure_board
+        return departure_board, response
