@@ -27,7 +27,7 @@ class DepartureBoard(
         default_factory=list,
         tag='TechnicalMessages'
     )
-    departure: list[Departure] = element(
+    departures: list[Departure] = element(
         default_factory=list,
         tag='Departure'
     )

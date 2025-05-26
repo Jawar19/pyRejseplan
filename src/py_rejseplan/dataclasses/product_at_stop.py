@@ -1,4 +1,5 @@
 import logging
+from typing import Optional
 from pydantic_xml import BaseXmlModel, attr, element
 import py_rejseplan.dataclasses.constants as constants
 
@@ -15,7 +16,7 @@ class ProductAtStop(
 
     name: str = attr()
     internalName: str = attr()
-    displayNumber: int = attr()
+    displayNumber: Optional[str] = attr(default="", tag='displayNumber')
     num: int = attr()
     catOut: str = attr()
     catIn: int = attr()
