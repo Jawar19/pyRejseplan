@@ -1,0 +1,26 @@
+name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
+
+on: push
+
+jobs:
+  build:
+    name: Build distribution 📦
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - name: Setup UV with caching
+      uses: astral-sh/setup-uv@v5
+      with:
+        enable-cache: true
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version-file: "pyproject.toml"
+    - name: Install environment
+      run: uv sync --locked --all-extras --dev
+    
+    - name: Build a binary wheel and a source tarball
+      run: uv build
