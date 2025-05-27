@@ -80,7 +80,8 @@ jobs:
           path: dist/
       - name: List files in dist directory
         run: ls -l dist
-
+      - name: Install twine
+        run: pip install twine
       - name: Validate package metadata
         run: twine check dist/*
 
