@@ -30,7 +30,7 @@ if (-Not (Test-Path -Path "./.venv")) {
     python -m venv .venv
 }
 ./.venv/Scripts/activate
-pip install -e .[dev]
+uv sync --dev
 
 # Get the version using setuptools_scm
 $version = python -m setuptools_scm --strip-dev
@@ -55,7 +55,7 @@ git tag -a "v$version" -m $commitMessage
 git push origin --tags
 
 # Build the distribution files using python -m build
-python -m build
+uv build -q
 
 $files = Get-ChildItem -Path "dist" -Filter "*$newVersion*" -File
 if ($files.Count -eq 0) {
