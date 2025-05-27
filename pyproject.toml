@@ -49,9 +49,6 @@ url = "https://test.pypi.org/simple/"
 publish-url = "https://test.pypi.org/legacy/"
 explicit = true
 
-[tool.setuptools]
-license-files = ["LICENSE"]
-
 [tool.setuptools.packages.find]
 where = ["src"]
 
