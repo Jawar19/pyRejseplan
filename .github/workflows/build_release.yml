@@ -39,7 +39,7 @@ jobs:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
     steps:
       - name: testing logic
-        run: echo "Non tagged commit push"
+        run: echo "Tagged commit push"
       # - name: Download all the dists
       #   uses: actions/download-artifact@v4
       #   with:
