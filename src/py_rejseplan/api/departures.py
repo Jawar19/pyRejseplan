@@ -1,4 +1,6 @@
 import logging
+
+import requests
 from .base import baseAPIClient
 
 from py_rejseplan.constants import RESOURCE as BASE_URL
@@ -20,7 +22,7 @@ class departuresAPIClient(baseAPIClient):
         _LOGGER.debug('Initializing departuresAPIClient')
         super().__init__(BASE_URL, auth_key, timeout)
 
-    def parse_response(self, response: str) -> DepartureBoard:
+    def parse_response(self, response: bytes | str) -> DepartureBoard:
         """
         Parse the XML response from the API and return a dictionary representation of the data.
         Args:
@@ -46,17 +48,17 @@ class departuresAPIClient(baseAPIClient):
             use_bus: bool = True,
             use_train: bool = True,
             use_metro: bool = True,
-        ) -> DepartureBoard:
+        ) -> tuple[DepartureBoard, requests.Response]:
         """Get departures for the given stop IDs.
         Args:
             stop_ids (list[int]): List of stop IDs to get departures for.
-            max_results (int, optional): Maximum number of results to return. Defaults to 10.
+            max_results (int, optional): Maximum number of results to return. Defaults to -1.
             use_bus (bool, optional): Whether to include bus departures. Defaults to True.
             use_train (bool, optional): Whether to include train departures. Defaults to True.
             use_metro (bool, optional): Whether to include metro departures. Defaults to True.
-        
+
         Returns:
-            dict: Dictionary containing the departures data.
+            tuple: (DepartureBoard, response object)
         """
         _LOGGER.debug('Getting departures for stop IDs: %s', stop_ids)
         if len(stop_ids) < 1:
@@ -73,7 +75,7 @@ class departuresAPIClient(baseAPIClient):
         if response is None:
             _LOGGER.error('Failed to get departures')
             return None
-        departure_board = self.parse_response(response.text)
+        departure_board = self.parse_response(response.content)
         if departure_board is None:
             _LOGGER.error('Failed to parse departures')
             return None
