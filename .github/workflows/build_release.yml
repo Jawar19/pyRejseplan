@@ -59,46 +59,46 @@ jobs:
       - name: Publish distribution 📦 to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1.12
   
-  release-to-github:
-    name: >-
-      Publish Python 🐍 distribution 📦 to Github repo
-    if: startsWith(github.ref, 'refs/tags/')  # only publish to PyPI on tag pushes
-    needs: 
-      - build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download all the dists
-        uses: actions/download-artifact@v4
-        with:
-          name: python-package-distributions
-          path: dist/
-      - name: 🛎 Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: 📋 Get Commits since last Release
-        id: changes
-        uses: simbo/changes-since-last-release-action@v1
-        with:  
-          line-prefix: "* "
-          include-hashes: false
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            Changes since ${{ steps.changes.outputs.last-tag }}:
-            ${{ steps.changes.outputs.log }}
-          draft: false
-          prerelease: false
-      - name: upload-assets
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist/*
+  # release-to-github:
+  #   name: >-
+  #     Publish Python 🐍 distribution 📦 to Github repo
+  #   if: startsWith(github.ref, 'refs/tags/')  # only publish to PyPI on tag pushes
+  #   needs: 
+  #     - build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Download all the dists
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: python-package-distributions
+  #         path: dist/
+  #     - name: 🛎 Checkout
+  #       uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: 0
+  #     - name: 📋 Get Commits since last Release
+  #       id: changes
+  #       uses: simbo/changes-since-last-release-action@v1
+  #       with:  
+  #         line-prefix: "* "
+  #         include-hashes: false
+  #     - name: Create Release
+  #       id: create_release
+  #       uses: actions/create-release@v1.1.4
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+  #       with:
+  #         tag_name: ${{ github.ref }}
+  #         release_name: Release ${{ github.ref }}
+  #         body: |
+  #           Changes since ${{ steps.changes.outputs.last-tag }}:
+  #           ${{ steps.changes.outputs.log }}
+  #         draft: false
+  #         prerelease: false
+  #     - name: upload-assets
+  #       uses: actions/upload-release-asset@v1.0.2
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         upload_url: ${{ steps.create_release.outputs.upload_url }}
+  #         asset_path: dist/*
