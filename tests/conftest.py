@@ -2,7 +2,6 @@
 
 import os
 import pytest
-from src.py_rejseplan.departureboard import DepartureBoard
 
 
 @pytest.fixture(name='key')
@@ -27,11 +26,3 @@ def fixture_key():
         print('Auth key not found, using dummy')
         _key = 'DUMMY_KEY'
     return _key
-
-
-@pytest.fixture
-def t_departureboard(key):
-    """Fixture for departureboard testing"""
-
-    return DepartureBoard(key, r'requestData\mdbRoskildeSt.pkl')
-    # return DepartureBoard(key)

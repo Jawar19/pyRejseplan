@@ -162,7 +162,6 @@ cython_debug/
 # ignore .key files
 *.key
 
-
 .vscode/*
 
 src/py_rejseplan/version/__version__.py
