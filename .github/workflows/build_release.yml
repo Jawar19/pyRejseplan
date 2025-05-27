@@ -64,12 +64,12 @@ jobs:
     steps:
       - name: testing logic
         run: echo "Non tagged commit push"
-    # - name: Download all the dists
-    #   uses: actions/download-artifact@v4
-    #   with:
-    #     name: python-package-distributions
-    #     path: dist/
-    # - name: Publish distribution 📦 to TestPyPI
-    #   uses: pypa/gh-action-pypi-publish@release/v1
-    #   with:
-    #     repository-url: https://test.pypi.org/legacy/
+      - name: Download all the dists
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+      - name: Publish distribution 📦 to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
