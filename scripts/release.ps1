@@ -30,7 +30,7 @@ if (-Not (Test-Path -Path "./.venv")) {
     python -m venv .venv
 }
 ./.venv/Scripts/activate
-pip install -e .[dev]
+uv sync --dev
 
 # Get the version using setuptools_scm
 $version = python -m setuptools_scm --strip-dev
@@ -53,31 +53,3 @@ git add .
 git commit -m $commitMessage
 git tag -a "v$version" -m $commitMessage
 git push origin --tags
-
-# Build the distribution files using python -m build
-python -m build
-
-$files = Get-ChildItem -Path "dist" -Filter "*$newVersion*" -File
-if ($files.Count -eq 0) {
-    Write-Host "No files found matching version $newVersion in the dist folder."
-    exit 1
-}
-Write-Information "Files to upload $files"
-# Upload the distribution files using Twine
-# twine upload $files TODO use pypi testserver to upload these tests to
-
-# twine upload --repository testpypi dist/*
-
-
-# # Check if GitHub CLI is available
-# if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
-#     Write-Host "GitHub CLI (gh) is not installed or not available in the PATH."
-#     Write-Host "You can install it using winget with the following command:"
-#     Write-Host "winget install --id GitHub.cli"
-#     exit 1
-# }
-
-# # Create a new GitHub release and upload the files
-# $releaseNotes = "Release version $newVersion\n$commitMessage"
-# gh release create $newVersion $files --title "Release $newVersion" --notes $releaseNotes --latest
-
