@@ -19,7 +19,6 @@ maintainers = [
 description = "Python interface with rejseplanens API 2.0 based on HAFAS"
 readme = "README.md"
 license = "MIT"
-license-files = ["LICENSE"]
 requires-python = ">=3.8"
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -49,6 +48,9 @@ name = "testpypi"
 url = "https://test.pypi.org/simple/"
 publish-url = "https://test.pypi.org/legacy/"
 explicit = true
+
+[tool.setuptools]
+license-files = ["LICENSE"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
