@@ -74,9 +74,9 @@ class departuresAPIClient(baseAPIClient):
         response = self._get( 'multiDepartureBoard', params=params)
         if response is None:
             _LOGGER.error('Failed to get departures')
-            return None
+            return None, response
         departure_board = self.parse_response(response.content)
         if departure_board is None:
             _LOGGER.error('Failed to parse departures')
-            return None
+            return None, response
         return departure_board, response
