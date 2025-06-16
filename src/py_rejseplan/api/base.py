@@ -39,3 +39,25 @@ class baseAPIClient():
             _LOGGER.debug('Request successful: %s', response.status_code)
             return response
         return None
+    
+    def validate_auth_key(self) -> bool:
+        """Validate the authorization key by making a simple request to the API.
+
+        Returns:
+            bool: True if the authorization key is valid, False otherwise.
+        """
+        try:
+            response = self._get('datainfo', params={})
+            if response is not None:
+                _LOGGER.debug('Authorization key is valid')
+                return True
+        except requests.exceptions.HTTPError as http_err:
+            if http_err.response.status_code == 401:
+                _LOGGER.error('Unauthorized: Invalid authorization key')
+                return False
+            else:
+                _LOGGER.error('HTTP error occurred: %s', http_err)
+                return False
+        except requests.exceptions.RequestException as ex:
+            _LOGGER.error('Request failed: %s', ex)
+            return False
