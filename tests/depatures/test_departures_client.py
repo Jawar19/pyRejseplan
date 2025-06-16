@@ -13,7 +13,7 @@ def test_get_departures(departures_api_client: departuresAPIClient):
     departures, response = departures_api_client.get_departures(stop_id)
     assert response is not None, "Response should not be None"
     assert response.status_code == 200, f"Expected status code 200, got {response.status_code}"
-
+ 
 def test_validate_auth_key(departures_api_client: departuresAPIClient):
     """Test the validate_auth_key method of departuresAPIClient."""
 
