@@ -14,20 +14,26 @@ class ProductAtStop(
     It extends the BaseXmlModel from pydantic_xml to provide XML parsing capabilities.
     """
 
-    name: str = attr()
-    internalName: str = attr()
+    name: Optional[str] = attr()
+    internalName: Optional[str] = attr()
+    addName: Optional[str] = attr()
     displayNumber: Optional[str] = attr(default="", tag='displayNumber')
-    num: int = attr()
-    catOut: str = attr()
-    catIn: int = attr()
-    catCode: int = attr()
-    cls: int = attr()
-    catOutS: int = attr()
-    catOutL: str = attr()
-    operatorCode: str = attr()
-    operator: str = attr()
-    admin: int = attr()
-    matchId: int = attr()
+    num: Optional[int] = attr()
+    line: Optional[str] = attr()
+    lineId: Optional[str] = attr()
+    lineHidden: bool = attr(default=False, tag='lineHidden')
+    catOut: Optional[str] = attr()
+    catIn: Optional[str] = attr()
+    catCode: Optional[str] = attr()
+    cls: Optional[str] = attr()
+    catOutS: Optional[str] = attr()
+    catOutL: Optional[str] = attr()
+    operatorCode: Optional[str] = attr()
+    operator: Optional[str] = attr()
+    admin: Optional[str] = attr()
+    routeIdxFrom: int = attr(default=-1, tag='routeIdxFrom')
+    routeIdxTo: int = attr(default=-1, tag='routeIdxTo')
+    matchId: Optional[str] = attr()
 
     icon: dict[str, str] = element(
         default_factory=dict,
@@ -40,9 +46,23 @@ class ProductAtStop(
     )
 
 
-# <ProductAtStop name="Re 54541" internalName="Re 54541" displayNumber="54541" num="54541"
-#     catOut="Re" catIn="004" catCode="2" cls="4" catOutS="004" catOutL="Re"
-#     operatorCode="DSB" operator="DSB" admin="000002" matchId="54541">
-#     <icon res="prod_ic" />
-#     <operatorInfo name="DSB" nameS="DSB" nameN="DSB" nameL="DSB" />
-# </ProductAtStop>
+# - name: str, optional
+# - internalName: str, optional
+# - addName: str, optional
+# - displayNumber: str, optional
+# - num: str, optional
+# - line: str, optional
+# - lineId: str, optional
+# - lineHidden: bool, default="false"
+# - catOut: str, optional
+# - catIn: str, optional
+# - catCode: str, optional
+# - cls: str, optional
+# - catOutS: str, optional
+# - catOutL: str, optional
+# - operatorCode: str, optional
+# - operator: str, optional
+# - admin: str, optional
+# - routeIdxFrom: int, default="-1"
+# - routeIdxTo: int, default="-1"
+# - matchId: str, optional
