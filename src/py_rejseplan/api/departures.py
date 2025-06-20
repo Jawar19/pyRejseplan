@@ -63,8 +63,9 @@ class departuresAPIClient(baseAPIClient):
         _LOGGER.debug('Getting departures for stop IDs: %s', stop_ids)
         if len(stop_ids) < 1:
             raise ValueError('Stop IDs must be provided')
+        prep_id_list = "|".join(map(str, stop_ids))
         params = {
-            'idList': stop_ids,
+            'idList': prep_id_list,
             'maxResults': max_results,
             'useBus': use_bus,
             'useTrain': use_train,
