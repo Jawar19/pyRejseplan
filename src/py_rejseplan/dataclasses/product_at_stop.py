@@ -16,7 +16,7 @@ class ProductAtStop(
 
     name: Optional[str] = attr()
     internalName: Optional[str] = attr()
-    addName: Optional[str] = attr()
+    addName: Optional[str] = attr(default="", tag='addName')
     displayNumber: Optional[str] = attr(default="", tag='displayNumber')
     num: Optional[int] = attr()
     line: Optional[str] = attr()
