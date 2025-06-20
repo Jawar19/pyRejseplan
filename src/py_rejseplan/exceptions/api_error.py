@@ -1,7 +1,7 @@
 """API error when Rejseplanen API v2.0 returns an error."""
 
 
-class RPAPIError(RuntimeError):
+class RPAPIError(BaseException):
     """Raised when the API returned an error."""
 
     def __init__(self, message, status_code=None):

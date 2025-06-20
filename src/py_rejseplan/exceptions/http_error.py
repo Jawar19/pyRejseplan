@@ -1,7 +1,7 @@
 """Exception class for HTTP errors during REST API calls"""
 
 
-class RPHTTPError(RuntimeError):
+class RPHTTPError(BaseException):
     """Raised when the HTTP response code is not 200."""
 
     def __init__(self, message, status_code=None):

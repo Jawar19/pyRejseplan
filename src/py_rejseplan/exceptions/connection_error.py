@@ -1,7 +1,7 @@
 """Exception for issues related to connection to Rejseplanen REST API"""
 
 
-class RPConnectionError(Exception):
+class RPConnectionError(BaseException):
     """Raised in the event of a network problem."""
 
     def __init__(self, message, status_code=None):
