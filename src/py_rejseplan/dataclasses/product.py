@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Product class for parsing XML data from the Rejseplanen API."""
+from typing import Optional
 from pydantic_xml import BaseXmlModel, attr, element
 import py_rejseplan.dataclasses.constants as constants
 
@@ -24,8 +25,8 @@ class Product(
     cls: str = attr()
     catOutS: str = attr()
     catOutL: str = attr()
-    operatorCode: str = attr()
-    operator: str = attr()
+    operatorCode: Optional[str] = attr()
+    operator: Optional[str] = attr()
     admin: str = attr()
     routeIdxFrom: int = attr()
     routeIdxTo: int = attr()
