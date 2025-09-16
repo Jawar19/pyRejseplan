@@ -1,5 +1,6 @@
 import logging
 
+from pydantic import ValidationError
 import requests
 from .base import baseAPIClient
 
@@ -37,6 +38,9 @@ class departuresAPIClient(baseAPIClient):
         try:
             departure_board = DepartureBoard.from_xml(response)
             return departure_board
+        except ValidationError as ve:
+            _LOGGER.error('Validation error parsing response: %s', ve)
+            return None
         except Exception as e:
             _LOGGER.error('Error parsing response: %s', e)
             return None
@@ -76,8 +80,14 @@ class departuresAPIClient(baseAPIClient):
         if response is None:
             _LOGGER.error('Failed to get departures')
             return None, response
-        departure_board = self.parse_response(response.content)
+        try:
+            departure_board = self.parse_response(response.content)
+        except Exception as e:
+            _LOGGER.error('Error parsing response: %s', e)
+            return None, response
+        
         if departure_board is None:
             _LOGGER.error('Failed to parse departures')
             return None, response
+        
         return departure_board, response
