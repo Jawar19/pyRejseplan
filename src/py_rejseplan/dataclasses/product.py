@@ -22,7 +22,7 @@ class Product(
     catOut: str = attr()
     catIn: str = attr()
     catCode: str = attr()
-    cls: str = attr()
+    cls: int = attr()
     catOutS: str = attr()
     catOutL: str = attr()
     operatorCode: Optional[str] = attr(default="")
