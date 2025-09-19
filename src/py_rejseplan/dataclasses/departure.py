@@ -50,14 +50,14 @@ class Departure(
     rtTime: Optional[datetime.time] = attr(tag='rtTime', default=None)
     rtDate: Optional[datetime.date] = attr(tag='rtDate', default=None)
     rtTz: Optional[int] = attr(tag='rtTz', default=0)
-    rtTrack: Optional[int] = attr(tag='rtTrack', default=-1)
+    rtTrack: Optional[str] = attr(tag='rtTrack', default=None)
     rttrackHidden: bool = attr(default=False, tag='rtTrackHidden')
     cancelled: Optional[bool] = attr(default=False)
     partCancelled: Optional[bool] = attr(default=False, tag='partCancelled')
     reachable: Optional[bool] = attr(default=True)
     redirected: Optional[bool] = attr(default=False)
     direction: Optional[str] = attr(default=None)
-    directionFlag: int = attr()
+    directionFlag: Optional[int] = attr(default=None, tag='directionFlag')
     directionExtId: Optional[str] = attr(default=None, tag='directionExtId')
     timeAtArrival: Optional[datetime.time] = attr(default=None, tag='timeAtArrival')
     dateAtArrival: Optional[datetime.date] = attr(default=None, tag='dateAtArrival')
@@ -80,7 +80,7 @@ class Departure(
         tag='DestinationStop'
     )
     journeyDetailRef: JourneyDetailRef = element(
-        default_factory=JourneyDetailRef,
+        default_factory=None,
         tag='JourneyDetailRef'
     )
     journeyStatus: JourneyStatusType = element(
