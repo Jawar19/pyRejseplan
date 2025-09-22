@@ -2,6 +2,8 @@ import logging
 
 from pydantic import ValidationError
 import requests
+
+from py_rejseplan.enums import TransportClass
 from .base import BaseAPIClient
 
 from py_rejseplan.constants import RESOURCE as BASE_URL
@@ -91,3 +93,28 @@ class DeparturesAPIClient(BaseAPIClient):
             return None, response
         
         return departure_board, response
+    
+    def calculate_departure_type_bitflag(self, departure_types: list) -> int | None:
+        """Calculate bitflag from departure type list."""
+        if not departure_types:
+            return None
+
+        bitflag = 0
+        for transport_class in departure_types:
+            if isinstance(transport_class, int):
+                # If already an int (TransportClass enum value)
+                bitflag |= transport_class
+            elif isinstance(transport_class, TransportClass):
+                # If TransportClass enum instance
+                bitflag |= transport_class.value
+            elif isinstance(transport_class, str):
+                # If string, try to convert to TransportClass enum
+                try:
+                    enum_value = TransportClass[transport_class.upper()]
+                    bitflag |= enum_value.value
+                except KeyError:
+                    _LOGGER.warning("Unknown departure type: %s", transport_class)
+            else:
+                _LOGGER.warning("Invalid departure type format: %s", transport_class)
+
+        return bitflag if bitflag > 0 else None
