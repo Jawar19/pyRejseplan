@@ -2,16 +2,16 @@ import logging
 
 from pydantic import ValidationError
 import requests
-from .base import baseAPIClient
+from .base import BaseAPIClient
 
 from py_rejseplan.constants import RESOURCE as BASE_URL
 from py_rejseplan.dataclasses.departure_board import DepartureBoard
 
 _LOGGER = logging.getLogger(__name__)
 
-class DeparturesAPIClient(baseAPIClient):
+class DeparturesAPIClient(BaseAPIClient):
     """Client for the departures API.
-    This class extends the baseAPIClient to provide specific functionality for the departures API.
+    This class extends the BaseAPIClient to provide specific functionality for the departures API.
     """
     def __init__(self, auth_key: str, timeout: int = 10) -> None:
         """Initialize the departures API client with the provided authorization key and optional timeout.
