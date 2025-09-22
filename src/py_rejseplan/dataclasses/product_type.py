@@ -1,16 +1,17 @@
-import logging
 from typing import Optional
 from pydantic_xml import BaseXmlModel, attr, element
 import py_rejseplan.dataclasses.constants as constants
+from .mixins import TransportClassMixin
 
-class ProductAtStop(
+class ProductType(
     BaseXmlModel,
+    TransportClassMixin,
     tag='ProductAtStop',
     ns="",
     nsmap=constants.NSMAP,
     search_mode='unordered',
 ):
-    """ProductAtStop class for parsing XML data from the Rejseplanen API.
+    """ProductType class for parsing XML data from the Rejseplanen API.
     This class is used to represent the product at stop data returned by the API.
     It extends the BaseXmlModel from pydantic_xml to provide XML parsing capabilities.
     """
@@ -26,7 +27,7 @@ class ProductAtStop(
     catOut: Optional[str] = attr(default=str)
     catIn: Optional[str] = attr(default=str)
     catCode: Optional[str] = attr(default=str)
-    cls: Optional[str] = attr(default=str)
+    cls: Optional[int] = attr(default=int)
     catOutS: Optional[str] = attr(default=str)
     catOutL: Optional[str] = attr(default=str)
     operatorCode: Optional[str] = attr(default=str)

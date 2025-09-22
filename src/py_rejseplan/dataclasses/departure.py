@@ -5,8 +5,7 @@ from pydantic_xml import BaseXmlModel, attr, element
 
 import py_rejseplan.dataclasses.constants as constants
 
-from .product_at_stop import ProductAtStop
-from .product import Product
+from .product_type import ProductType
 from .journey_detail_ref import JourneyDetailRef
 from .note import Notes
 from .enums import JourneyStatusType, PrognosisType, DepartureType, RealtimeDataSourceType
@@ -87,11 +86,11 @@ class Departure(
         default_factory=None,
         tag='JourneyStatus'
     )
-    productAtStop: ProductAtStop = element(
+    productAtStop: ProductType = element(
         default_factory=list,
         tag='ProductAtStop'
     )
-    product: Product = element(
+    product: ProductType = element(
         default_factory=list,
         tag='Product'
     )
