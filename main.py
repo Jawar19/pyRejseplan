@@ -4,7 +4,7 @@ import sys
 import argparse
 
 # from py_rejseplan.locationhandler import LocationHandler
-from py_rejseplan.departureboard import DepartureBoard
+from py_rejseplan.api.departures import DepartureBoard
 
 DEBUG = False
 
@@ -42,11 +42,11 @@ if not KEY:
     sys.exit(1)
 rootlogger.info('Auth key found')
 
-if args.debug:
-    departure_board = DepartureBoard(KEY, r'requestData\mdbRoskildeSt.pkl')
-else:
-    departure_board = DepartureBoard(KEY)
+# if args.debug:
+#     departure_board = DepartureBoard(KEY, r'requestData\mdbRoskildeSt.pkl')
+# else:
+#     departure_board = DepartureBoard(KEY)
 
-departure_board._stop_ids = [8600617, 8600794]
+# departure_board._stop_ids = [8600617, 8600794]
 
-departure_board.get_departures()
+# departure_board.get_departures()

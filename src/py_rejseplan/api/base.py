@@ -3,7 +3,7 @@ import logging
 
 _LOGGER = logging.getLogger(__name__)
 
-class baseAPIClient():
+class BaseAPIClient():
     """Base class for API clients.
     This class provides a method to construct headers for API requests.
     """
@@ -20,7 +20,7 @@ class baseAPIClient():
         self.headers = {'Authorization': f'Bearer {auth_key}'}
         self.timeout = timeout
 
-    def _get(self, service:str, params:dict) -> requests.Response:
+    def _get(self, service:str, params:dict) -> requests.Response | None:
         """Make a GET request to the specified service with the given parameters.
 
         Args:
@@ -51,6 +51,9 @@ class baseAPIClient():
             if response is not None:
                 _LOGGER.debug('Authorization key is valid')
                 return True
+            else:
+                _LOGGER.error('Authorization key is invalid or response is None')
+                return False
         except requests.exceptions.HTTPError as http_err:
             if http_err.response.status_code == 401:
                 _LOGGER.error('Unauthorized: Invalid authorization key')
@@ -60,4 +63,4 @@ class baseAPIClient():
                 return False
         except requests.exceptions.RequestException as ex:
             _LOGGER.error('Request failed: %s', ex)
-            return False
+            return False 

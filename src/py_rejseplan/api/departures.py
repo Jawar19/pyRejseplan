@@ -9,7 +9,7 @@ from py_rejseplan.dataclasses.departure_board import DepartureBoard
 
 _LOGGER = logging.getLogger(__name__)
 
-class departuresAPIClient(baseAPIClient):
+class DeparturesAPIClient(baseAPIClient):
     """Client for the departures API.
     This class extends the baseAPIClient to provide specific functionality for the departures API.
     """
@@ -23,7 +23,7 @@ class departuresAPIClient(baseAPIClient):
         _LOGGER.debug('Initializing departuresAPIClient')
         super().__init__(BASE_URL, auth_key, timeout)
 
-    def parse_response(self, response: bytes | str) -> DepartureBoard:
+    def parse_response(self, response: bytes | str) -> DepartureBoard | None:
         """
         Parse the XML response from the API and return a dictionary representation of the data.
         Args:
@@ -52,7 +52,7 @@ class departuresAPIClient(baseAPIClient):
             use_bus: bool = True,
             use_train: bool = True,
             use_metro: bool = True,
-        ) -> tuple[DepartureBoard, requests.Response]:
+        ) -> tuple[DepartureBoard | None, requests.Response | None]:
         """Get departures for the given stop IDs.
         Args:
             stop_ids (list[int]): List of stop IDs to get departures for.
