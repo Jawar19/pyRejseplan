@@ -6,7 +6,6 @@ from .mixins import TransportClassMixin
 class ProductType(
     BaseXmlModel,
     TransportClassMixin,
-    tag='ProductAtStop',
     ns="",
     nsmap=constants.NSMAP,
     search_mode='unordered',
@@ -18,69 +17,69 @@ class ProductType(
     # attributes
     name: Optional[str] = attr(default=str)
     internalName: Optional[str] = attr(default=str)
-    addName: Optional[str] = attr(default="", tag='addName')
-    displayNumber: Optional[str] = attr(default="", tag='displayNumber')
-    num: Optional[int] = attr(default=str)
+    addName: Optional[str] = attr(default="", name='addName')
+    displayNumber: Optional[str] = attr(default="", name='displayNumber')
+    num: Optional[int] = attr(default=-1)
     line: Optional[str] = attr(default=str)
     lineId: Optional[str] = attr(default=str)
-    lineHidden: bool = attr(default=False, tag='lineHidden')
+    lineHidden: bool = attr(default=False, name='lineHidden')
     catOut: Optional[str] = attr(default=str)
     catIn: Optional[str] = attr(default=str)
     catCode: Optional[str] = attr(default=str)
-    cls_id: Optional[int] = attr(default=int, tag='cls')
+    cls_id: Optional[int] = attr(default=None, name='cls')
     catOutS: Optional[str] = attr(default=str)
     catOutL: Optional[str] = attr(default=str)
     operatorCode: Optional[str] = attr(default=str)
     operator: Optional[str] = attr(default=str)
     admin: Optional[str] = attr(default=str)
-    routeIdxFrom: int = attr(default=-1, tag='routeIdxFrom')
-    routeIdxTo: int = attr(default=-1, tag='routeIdxTo')
+    routeIdxFrom: int = attr(default=-1, name='routeIdxFrom')
+    routeIdxTo: int = attr(default=-1, name='routeIdxTo')
     matchId: Optional[str] = attr(default=str)
 
     #Customer specific attributes
-    tarGr: Optional[str] = attr(default=str, tag='tarGr')
-    surcharge: Optional[str] = attr(default=str, tag='surcharge')
-    outCtrl: Optional[str] = attr(default=str, tag='outCtrl')
-    locTraffic: Optional[str] = attr(default=str, tag='locTraffic')
-    shipTraffic: Optional[str] = attr(default=str, tag='shipTraffic')
+    tarGr: Optional[str] = attr(default=str, name='tarGr')
+    surcharge: Optional[str] = attr(default=str, name='surcharge')
+    outCtrl: Optional[str] = attr(default=str, name='outCtrl')
+    locTraffic: Optional[str] = attr(default=str, name='locTraffic')
+    shipTraffic: Optional[str] = attr(default=str, name='shipTraffic')
 
     icon: dict[str, str] = element(
         default_factory=dict,
-        tag='icon'
+        name='icon'
     )
 
     status: dict[str, str] = element(
         default_factory=dict,
-        tag='status'
+        name='status'
     )
 
     fromLocation: dict[str, str] = element(
         default_factory=dict,
-        tag='fromLocation'
+        name='fromLocation'
     )
 
     toLocation: dict[str, str] = element(
         default_factory=dict,
-        tag='toLocation'
+        name='toLocation'
     )
 
     operatorInfo: dict[str, str] = element(
         default_factory=dict,
-        tag='operatorInfo'
+        name='operatorInfo'
     )
 
     Note: list[dict[str, str]] = element(
         default_factory=list,
-        tag='Note'
+        name='Note'
     )
 
     Message: list[dict[str, str]] = element(
         default_factory=list,
-        tag='Message'
+        name='Message'
     )
     LineInfo: dict[str, str] = element(
         default_factory=dict,
-        tag='LineInfo'
+        name='LineInfo'
     )
 
 

@@ -1,4 +1,3 @@
-import logging
 from typing import Optional, List
 from pydantic_xml import BaseXmlModel, attr, element
 import py_rejseplan.dataclasses.constants as constants
