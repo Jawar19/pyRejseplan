@@ -27,7 +27,7 @@ class ProductType(
     catOut: Optional[str] = attr(default=str)
     catIn: Optional[str] = attr(default=str)
     catCode: Optional[str] = attr(default=str)
-    cls: Optional[int] = attr(default=int)
+    cls_id: Optional[int] = attr(default=int, tag='cls')
     catOutS: Optional[str] = attr(default=str)
     catOutL: Optional[str] = attr(default=str)
     operatorCode: Optional[str] = attr(default=str)
