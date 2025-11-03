@@ -1,6 +1,8 @@
 import requests
 import logging
 
+from py_rejseplan.exceptions import HTTPError, ConnectionError, APIError
+
 _LOGGER = logging.getLogger(__name__)
 
 class BaseAPIClient():
@@ -20,25 +22,38 @@ class BaseAPIClient():
         self.headers = {'Authorization': f'Bearer {auth_key}'}
         self.timeout = timeout
 
-    def _get(self, service:str, params:dict) -> requests.Response | None:
-        """Make a GET request to the specified service with the given parameters.
-
-        Args:
-            service (str): The API service endpoint.
-            params (dict): The parameters to include in the request.
-        """
+    def _get(self, service: str, params: dict) -> requests.Response:
+        """Make a GET request to the specified service with the given parameters."""
         url = self.base_url + service
         _LOGGER.debug('Making request to %s with params: %s', url, params)
+        
         try:
             response = requests.get(url, params=params, headers=self.headers, timeout=self.timeout)
-            response.raise_for_status()  # Raise an error for bad responses
-        except requests.exceptions.RequestException as ex:
-            _LOGGER.error('Request failed: %s', ex)
-            raise ex
-        if response.status_code == requests.codes['OK']:
+            response.raise_for_status()  # This handles 4xx, 5xx errors
             _LOGGER.debug('Request successful: %s', response.status_code)
             return response
-        return None
+            
+        except requests.exceptions.HTTPError as e:
+            # Convert requests HTTPError to our HTTPError
+            status_code = e.response.status_code if e.response else None
+            error_msg = f'HTTP {status_code}: {e}'
+            _LOGGER.error('HTTP error: %s', error_msg)
+            raise HTTPError(error_msg, status_code=status_code, response=e.response) from e
+            
+        except requests.exceptions.Timeout as e:
+            error_msg = f'Request timeout after {self.timeout} seconds'
+            _LOGGER.error('Connection timeout: %s', error_msg)
+            raise ConnectionError(error_msg) from e
+            
+        except requests.exceptions.ConnectionError as e:
+            error_msg = f'Connection failed to {url}'
+            _LOGGER.error('Connection error: %s', error_msg)
+            raise ConnectionError(error_msg) from e
+            
+        except requests.exceptions.RequestException as e:
+            error_msg = f'Request failed: {e}'
+            _LOGGER.error('Request exception: %s', error_msg)
+            raise APIError(error_msg) from e
     
     def validate_auth_key(self) -> bool:
         """Validate the authorization key by making a simple request to the API.
@@ -47,20 +62,17 @@ class BaseAPIClient():
             bool: True if the authorization key is valid, False otherwise.
         """
         try:
-            response = self._get('datainfo', params={})
-            if response is not None:
-                _LOGGER.debug('Authorization key is valid')
-                return True
-            else:
-                _LOGGER.error('Authorization key is invalid or response is None')
-                return False
-        except requests.exceptions.HTTPError as http_err:
-            if http_err.response.status_code == 401:
+            self._get('datainfo', params={})
+            _LOGGER.debug('Authorization key is valid')
+            return True
+            
+        except HTTPError as e:
+            if e.status_code == 401:
                 _LOGGER.error('Unauthorized: Invalid authorization key')
-                return False
             else:
-                _LOGGER.error('HTTP error occurred: %s', http_err)
-                return False
-        except requests.exceptions.RequestException as ex:
-            _LOGGER.error('Request failed: %s', ex)
-            return False 
+                _LOGGER.error('HTTP error during auth validation: %s', e)
+            return False
+            
+        except (ConnectionError, APIError) as e:
+            _LOGGER.error('Error during auth validation: %s', e)
+            return False
