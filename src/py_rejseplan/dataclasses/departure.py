@@ -6,6 +6,7 @@ from pydantic_xml import BaseXmlModel, attr, element
 import py_rejseplan.dataclasses.constants as constants
 
 from .product_type import ProductType
+from .stop import StopType
 from .journey_detail_ref import JourneyDetailRef
 from .note import Notes
 from .enums import JourneyStatusType, PrognosisType, DepartureType, RealtimeDataSourceType
@@ -70,11 +71,11 @@ class Departure(
     uncertainDelay: Optional[bool] = attr(default=False, tag='uncertainDelay')
 
     # Subelements
-    originStop: Optional['Departure'] = element(
+    originStop: Optional['StopType'] = element(
         default=None,
         tag='OriginStop'
     )
-    destinationStop: Optional['Departure'] = element(
+    destinationStop: Optional['StopType'] = element(
         default=None,
         tag='DestinationStop'
     )

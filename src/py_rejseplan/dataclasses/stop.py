@@ -2,7 +2,7 @@ from typing import Optional, List
 from pydantic_xml import BaseXmlModel, attr, element
 import py_rejseplan.dataclasses.constants as constants
 
-class Stop(BaseXmlModel, tag='Stop', nsmap=constants.NSMAP, search_mode='unordered'):
+class StopType(BaseXmlModel, nsmap=constants.NSMAP, search_mode='unordered'):
     # Elements
     Notes: Optional[str] = element(default=None)
     altId: Optional[List[str]] = element(default=None)

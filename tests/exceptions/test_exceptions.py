@@ -124,27 +124,27 @@ class TestConnectionError:
         """Test basic ConnectionError."""
         error = ConnectionError("Network timeout")
         assert error.message == "Network timeout"
-        assert error.original_error is None
-        
-    def test_connection_error_with_original(self):
-        """Test ConnectionError with original exception."""
-        original = ValueError("Invalid URL")
-        error = ConnectionError("Connection failed", original_error=original)
-        assert error.original_error == original
         
     def test_connection_error_str_with_original(self):
-        """Test ConnectionError string with original error."""
+        """Test ConnectionError string when using native exception chaining."""
         original = ValueError("Invalid URL")
-        error = ConnectionError("Connection failed", original_error=original)
-        expected = "ConnectionError: Connection failed (caused by: Invalid URL)"
-        assert str(error) == expected
+        try:
+            raise ConnectionError("Connection failed") from original
+        except ConnectionError as e:
+            # native chaining stores the original exception in __cause__
+            assert e.__cause__ is original
+            expected = "ConnectionError: Connection failed"
+            assert str(e) == expected
         
     def test_connection_error_repr_with_original(self):
-        """Test ConnectionError repr with original error."""
+        """Test ConnectionError repr when using native exception chaining."""
         original = ValueError("Invalid URL")
-        error = ConnectionError("Connection failed", original_error=original)
-        expected = 'ConnectionError(message="Connection failed", status_code=None, original_error=Invalid URL)'
-        assert repr(error) == expected
+        try:
+            raise ConnectionError("Connection failed") from original
+        except ConnectionError as e:
+            assert e.__cause__ is original
+            expected = 'ConnectionError(message="Connection failed", status_code=None)'
+            assert repr(e) == expected
 
 
 class TestValidationError:
