@@ -4,7 +4,6 @@ import sys
 import argparse
 
 # from py_rejseplan.locationhandler import LocationHandler
-from py_rejseplan.api.departures import DepartureBoard
 
 DEBUG = False
 
