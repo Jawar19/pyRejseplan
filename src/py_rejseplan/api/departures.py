@@ -5,7 +5,7 @@ from pydantic import ValidationError as PydanticValidationError
 import requests
 
 from py_rejseplan.enums import TransportClass
-from .base import BaseAPIClient
+from .base import BaseAPIClient, AsyncHTTPResponse
 
 from py_rejseplan.constants import RESOURCE as BASE_URL
 from py_rejseplan.dataclasses.departure_board import DepartureBoard
@@ -131,6 +131,33 @@ class DeparturesAPIClient(BaseAPIClient):
         # or return valid DepartureBoard (possibly empty) for parsing issues
         departure_board = self.parse_response(response.content)
         
+        return departure_board, response
+
+    async def get_departures_async(
+            self,
+            stop_ids: list[int],
+            max_results: int = -1,
+            use_bus: bool = True,
+            use_train: bool = True,
+            use_metro: bool = True,
+        ) -> tuple[DepartureBoard, AsyncHTTPResponse]:
+        """Get departures for the given stop IDs using async aiohttp transport."""
+        _LOGGER.debug('Getting departures asynchronously for stop IDs: %s', stop_ids)
+        if len(stop_ids) < 1:
+            raise ValueError('Stop IDs must be provided')
+
+        prep_id_list = "|".join(map(str, stop_ids))
+        params = {
+            'idList': prep_id_list,
+            'maxResults': max_results,
+            'useBus': use_bus,
+            'useTrain': use_train,
+            'useMetro': use_metro,
+        }
+
+        _LOGGER.debug('Requesting departures asynchronously with params: %s', params)
+        response = await self._get_async('multiDepartureBoard', params=params)
+        departure_board = self.parse_response(response.content)
         return departure_board, response
     
     def calculate_departure_type_bitflag(self, departure_types: list) -> int | None:
