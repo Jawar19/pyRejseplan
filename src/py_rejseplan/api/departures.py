@@ -3,6 +3,7 @@ from datetime import datetime
 import logging
 from xml.etree.ElementTree import ParseError as XMLParseError
 
+from requests import Response
 import aiohttp
 from pydantic import ValidationError as PydanticValidationError
 
@@ -91,7 +92,7 @@ class DeparturesAPIClient(BaseAPIClient):
             use_bus: bool = True,
             use_train: bool = True,
             use_metro: bool = True,
-        ) -> tuple[DepartureBoard, requests.Response]:
+        ) -> tuple[DepartureBoard, Response]:
         """Get departures for the given stop IDs.
         
         Args:
