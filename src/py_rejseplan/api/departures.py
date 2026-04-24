@@ -1,8 +1,10 @@
+from __future__ import annotations
 from datetime import datetime
 import logging
+from xml.etree.ElementTree import ParseError as XMLParseError
 
+import aiohttp
 from pydantic import ValidationError as PydanticValidationError
-import requests
 
 from py_rejseplan.enums import TransportClass
 from .base import BaseAPIClient, AsyncHTTPResponse
@@ -17,7 +19,7 @@ class DeparturesAPIClient(BaseAPIClient):
     """Client for the departures API.
     This class extends the BaseAPIClient to provide specific functionality for the departures API.
     """
-    def __init__(self, auth_key: str, timeout: int = 10) -> None:
+    def __init__(self, auth_key: str, timeout: int = 10, session: aiohttp.ClientSession | None = None) -> None:
         """Initialize the departures API client with the provided authorization key and optional timeout.
 
         Args:
@@ -25,7 +27,7 @@ class DeparturesAPIClient(BaseAPIClient):
             timeout (int, optional): Timeout for API requests in seconds. Defaults to 10.
         """
         _LOGGER.debug('Initializing departuresAPIClient')
-        super().__init__(BASE_URL, auth_key, timeout)
+        super().__init__(BASE_URL, auth_key, timeout, session=session)
 
     def _create_empty_departure_board(self) -> DepartureBoard:
         """Create an empty departure board for fallback scenarios."""
@@ -74,18 +76,12 @@ class DeparturesAPIClient(BaseAPIClient):
             
             if critical_errors:
                 _LOGGER.error('Critical validation errors, returning empty departure board: %s', critical_errors)
-                return self._create_empty_departure_board()
             else:
-                # Only departure/technical message validation errors - these are handled by field validators
-                _LOGGER.warning('Non-critical validation errors handled by field validators: %s', ve)
-                try:
-                    return DepartureBoard.from_xml(response)
-                except Exception as retry_error:
-                    _LOGGER.error('Failed to parse even with field validation, returning empty board: %s', retry_error)
-                    return self._create_empty_departure_board()
-                
-        except Exception as e:
-            _LOGGER.error('Unexpected error parsing response, returning empty board: %s', e)
+                _LOGGER.warning('Non-critical validation errors in departures/technicalMessages, returning empty board: %s', ve)
+            return self._create_empty_departure_board()
+
+        except (XMLParseError, ValueError) as e:
+            _LOGGER.error('XML parsing error, returning empty departure board: %s', e)
             return self._create_empty_departure_board()
 
     def get_departures(

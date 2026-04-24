@@ -315,12 +315,8 @@ class TestDeparturesAPIClientAdvancedErrorHandling:
     def test_parse_response_critical_validation_errors(self, mock_client, monkeypatch):
         """Test parse_response with critical validation errors returns empty board."""
         def mock_from_xml_critical_error(xml_data):
-            from pydantic import ValidationError
-            # Critical errors are those NOT in departures or technicalMessages
-            raise ValidationError([
-                {'type': 'missing', 'loc': ('serverVersion',), 'msg': 'Field required'},
-                {'type': 'missing', 'loc': ('dialectVersion',), 'msg': 'Field required'}
-            ], DepartureBoard)
+            # Raise a real ValidationError with critical fields (not departures/technicalMessages)
+            DepartureBoard.model_validate({})
         
         monkeypatch.setattr('py_rejseplan.dataclasses.departure_board.DepartureBoard.from_xml', 
                            mock_from_xml_critical_error)
@@ -369,15 +365,11 @@ class TestDeparturesAPIClientAdvancedErrorHandling:
     
     def test_parse_response_validation_error_detection(self, mock_client, monkeypatch):
         """Test the logic for detecting critical vs non-critical validation errors."""
-        from pydantic import ValidationError
         
         # Mock the validation error case for critical errors
         def mock_critical_error(source, context=None, **kwargs):
-            # Critical errors are those NOT in departures or technicalMessages
-            raise ValidationError([
-                {'type': 'missing', 'loc': ('serverVersion',), 'msg': 'Field required'},
-                {'type': 'missing', 'loc': ('planRtTs',), 'msg': 'Field required'}
-            ], DepartureBoard)
+            # Raise a real ValidationError with critical fields (not departures/technicalMessages)
+            DepartureBoard.model_validate({})
         
         monkeypatch.setattr('py_rejseplan.dataclasses.departure_board.DepartureBoard.from_xml', 
                            mock_critical_error)

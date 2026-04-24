@@ -13,13 +13,13 @@ Example:
     # Use locationhandler to find locations
     locations = locationhandler.find_location("Copenhagen")
 """
-
+import logging
 # from py_rejseplan import constants
 # from py_rejseplan import dataclasses
 # from py_rejseplan import locationhandler
 # from py_rejseplan import departureboard
 # from py_rejseplan import exceptions
 
-# # logging.getLogger('pyRejseplan').addHandler(logging.NullHandler())
+logging.getLogger('py_rejseplan').addHandler(logging.NullHandler())
 
 # __all__ = [constants, dataclasses, locationhandler, departureboard, exceptions]

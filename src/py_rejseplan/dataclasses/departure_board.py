@@ -1,6 +1,7 @@
 from datetime import datetime
+from typing import Optional
 from pydantic_xml import BaseXmlModel, attr, element
-from pydantic import field_validator
+from pydantic import field_validator, ValidationError as PydanticValidationError
 import logging
 
 import py_rejseplan.dataclasses.constants as constants
@@ -24,8 +25,7 @@ class DepartureBoard(
     dialectVersion: str = attr()
     planRtTs: datetime = attr()
     requestId: str = attr()
-    technicalMessages: TechnicalMessages = element(
-        default_factory=list,
+    technicalMessages: Optional[TechnicalMessages] = element(
         tag='TechnicalMessages'
     )
     departures: list[Departure] = element(
@@ -35,57 +35,44 @@ class DepartureBoard(
 
     @field_validator('departures', mode='before')
     @classmethod
-    def validate_departures(cls, v):
+    def  validate_departures(cls, value):
         """
         Validate departures list, filtering out invalid entries.
         This allows partial success when some departures are malformed.
         """
-        if not v:
+        if not value:
             return []
         
-        if not isinstance(v, list):
-            _LOGGER.warning("Expected list for departures, got %s", type(v))
+        if not isinstance(value, list):
+            _LOGGER.warning("Expected list for departures, got %s", type(value))
             return []
-        
-        valid_departures = []
-        for i, departure_data in enumerate(v):
+        valid_departures: list[Departure] = []
+
+        for index, item in enumerate(value):
             try:
-                # If it's already a validated Departure object, keep it
-                if hasattr(departure_data, '__class__') and departure_data.__class__.__name__ == 'Departure':
-                    valid_departures.append(departure_data)
+                if isinstance(item, Departure):
+                    valid_departures.append(item)
+                elif isinstance(item, dict):
+                    valid_departures.append(Departure.model_validate(item))
                 else:
-                    # Let pydantic validate the departure data
-                    if hasattr(departure_data, 'model_validate'):
-                        valid_departure = departure_data
-                    else:
-                        # This handles raw XML element data
-                        valid_departure = departure_data
-                    valid_departures.append(valid_departure)
-            except Exception as e:
-                _LOGGER.warning("Skipping invalid departure at index %d: %s", i, e)
-                continue
+                    _LOGGER.warning("Skipping departure at index %d: unexpected type %s", index, type(item))
+            except PydanticValidationError as e:
+                _LOGGER.warning("Skipping invalid departure at index %d: %s", index, e)
         
-        _LOGGER.info("Successfully validated %d out of %d departures", len(valid_departures), len(v))
+        _LOGGER.info("Validated %d departures (skipped %d invalid)", 
+             len(valid_departures), len(value) - len(valid_departures))
         return valid_departures
 
     @field_validator('technicalMessages', mode='before')
     @classmethod
     def validate_technical_messages(cls, v):
-        """
-        Validate technical messages, providing empty fallback if invalid.
-        """
+        """Validate technical messages, providing empty fallback if invalid."""
         if not v:
-            from .technical_messages import TechnicalMessages
             return TechnicalMessages(technicalMessages=[])
         
-        try:
-            # If it's already a TechnicalMessages object, return it
-            if hasattr(v, '__class__') and v.__class__.__name__ == 'TechnicalMessages':
-                return v
-            else:
-                # Let pydantic handle validation
-                return v
-        except Exception as e:
-            _LOGGER.warning("Invalid technical messages, using empty fallback: %s", e)
-            from .technical_messages import TechnicalMessages
-            return TechnicalMessages(technicalMessages=[])
+        # If already a TechnicalMessages instance, return it
+        if isinstance(v, TechnicalMessages):
+            return v
+        
+        # For other types, pass through and let pydantic's field validation handle it
+        return v

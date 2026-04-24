@@ -26,7 +26,7 @@ class Departure(
     It extends the BaseXmlModel from pydantic_xml to provide XML parsing capabilities.
     """
     name: str = attr()
-    type: DepartureType = attr(default=None, tag='type',)
+    type: Optional[DepartureType] = attr(default=None, tag='type',)
     stop: str = attr()
     stopid: str = attr()
     stopExtId: int = attr()

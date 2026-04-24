@@ -7,6 +7,7 @@ import datetime
 import pytest
 from py_rejseplan.dataclasses.departure import Departure
 from py_rejseplan.dataclasses.departure_board import DepartureBoard
+from pydantic import BaseModel, ValidationError as PydanticValidationError
 
 
 _LOGGER = logging.getLogger(__name__)
@@ -49,3 +50,37 @@ def test_first_departure_details(departure_board: DepartureBoard):
     assert first_departure.stop == "Roskilde St."
     assert isinstance(first_departure.time, datetime.time)
     assert isinstance(first_departure.date, datetime.date)
+
+def test_validate_departures_filters_invalid_entries(monkeypatch, caplog):
+    """Validator should keep valid entries and skip invalid ones."""
+
+    def make_validation_error() -> PydanticValidationError:
+        class _Dummy(BaseModel):
+            required_field: int
+
+        try:
+            _Dummy.model_validate({})
+        except PydanticValidationError as exc:
+            return exc
+        raise AssertionError("Expected PydanticValidationError was not created")
+
+    fake_valid_departure = object()
+
+    def fake_model_validate(item):
+        if item.get("ok"):
+            return fake_valid_departure
+        raise make_validation_error()
+
+    monkeypatch.setattr(Departure, "model_validate", staticmethod(fake_model_validate))
+
+    result = DepartureBoard.validate_departures(
+        [
+            {"ok": True},   # should pass
+            {"ok": False},  # should be skipped via validation error
+            "bad-type",     # should be skipped via type check
+        ]
+    )
+
+    assert result == [fake_valid_departure]
+    assert "Skipping invalid departure at index 1" in caplog.text
+    assert "unexpected type" in caplog.text

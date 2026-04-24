@@ -42,13 +42,14 @@ class BaseAPIClient():
         self._session = session
         self._owns_session = session is None
 
+
     async def _get_async(self, service: str, params: dict) -> AsyncHTTPResponse:
         """Make an async GET request to the specified service with the given parameters."""
         url = self.base_url + service
         _LOGGER.debug('Making async request to %s with params: %s', url, params)
 
         try:
-            if self._session is None:
+            if self._session is None or self._session.closed:
                 self._session = aiohttp.ClientSession()
 
             async with self._session.get(
