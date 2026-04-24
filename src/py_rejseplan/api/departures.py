@@ -147,9 +147,9 @@ class DeparturesAPIClient(BaseAPIClient):
         params = {
             'idList': prep_id_list,
             'maxResults': max_results,
-            'useBus': use_bus,
-            'useTrain': use_train,
-            'useMetro': use_metro,
+            'useBus': int(use_bus),
+            'useTrain': int(use_train),
+            'useMetro': int(use_metro),
         }
 
         _LOGGER.debug('Requesting departures asynchronously with params: %s', params)
